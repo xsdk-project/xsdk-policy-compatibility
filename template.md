@@ -1,8 +1,11 @@
-# Software Name
+# xSDK Community Policy Compatibility for *<enter name of your software>*
 
-This document summarizes the compatibility of *<software name>* with the xSDK community policies. Here only short descriptions of each policy are provided. More detail is available [here.](https://xsdk.info/policies/)
+This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://docs.google.com/document/d/1DCx2Duijb0COESCuxwEEK1j0BPe2cTIJ-AjtJxt3290/edit#heading=h.2hp5zbf0n3o3)
+and should be considered when filling out this form.
 
-
+Please, provide information on your compability status for each mandatory policy, and if possible also for recommended policies.
+If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
+For current xSDK member packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy. Thisinformation will be helpful for future xSDK member packages.
 
 **M1.** Support xSDK community GNU Autoconf or CMake options.
 ```
