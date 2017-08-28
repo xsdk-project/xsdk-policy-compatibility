@@ -67,7 +67,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 
 ```
 
-**M13.** Install headers and libraries under \<prefix\>/inlude and \<prefix\>/lib.
+**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib.
 ```
 
 ```
