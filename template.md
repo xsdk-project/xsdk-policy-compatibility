@@ -1,28 +1,28 @@
-# xSDK Community Policy Compatibility for *<enter name of your software>*
+# xSDK Community Policy Compatibility for <enter name of your software>
 
 This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://docs.google.com/document/d/1DCx2Duijb0COESCuxwEEK1j0BPe2cTIJ-AjtJxt3290/edit#heading=h.2hp5zbf0n3o3)
 and should be considered when filling out this form.
 
 Please, provide information on your compability status for each mandatory policy, and if possible also for recommended policies.
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
-For current xSDK member packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy. Thisinformation will be helpful for future xSDK member packages.
+For current xSDK member packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
 
 **M1.** Support xSDK community GNU Autoconf or CMake options.
 ```
-*<Describe effort if applicable.>*
-```
-
-**M2.** Provide a comprehensive test suite.
-```
 
 ```
 
-**M3.** Employ userprovided MPI communicator.
+**M2.** Provide a comprehensive test suite for correctness of installation verification.
 ```
 
 ```
 
-**M4.** Give best effort at portability to key architectures.
+**M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD).
+```
+
+```
+
+**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF).
 ```
 
 ```
@@ -32,12 +32,12 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 
 ```
 
-**M6.** Respect system resources and settings made by other previously called packages.
+**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling).
 ```
 
 ```
 
-**M7.** Come with an open source license.
+**M7.** Come with an open source (BSD style) license.
 ```
 
 ```
@@ -52,22 +52,22 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 
 ```
 
-**M10.** Provide an accessible repository (not necessarily publicly available).
+**M10.** Provide an xSDK team accessible repository (not necessarily publicly available).
 ```
 
 ```
 
-**M11.** Have no hardwired print or IO statements.
+**M11.** Have no hardwired print or IO statements that cannot be turned off.
 ```
 
 ```
 
-**M12.** Allow installing, building, and linking against an outside copy of external software.
+**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software.
 ```
 
 ```
 
-**M13.** Install headers and libraries under <prefix>/include and <prefix>/lib.
+**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib.
 ```
 
 ```
@@ -88,6 +88,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 ```
 
 **Recommended Policies**
+
 
 **R1.** Have a public repository.
 ```
