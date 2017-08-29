@@ -14,7 +14,7 @@ hypre is compliant. We had to modify Autoconf script options to use blas and lap
 
 **M2.** Provide a comprehensive test suite for correctness of installation verification.
 ```
-hypre provides a script that can run a subset of the regression tests to satisfy this requirement.
+hypre provides a script that can run a subset of the daily regression tests to satisfy this requirement.
 ```
 
 **M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD).
@@ -39,7 +39,7 @@ hypre is compliant.
 
 **M7.** Come with an open source (BSD style) license.
 ```
-hypre has an LGPL license, which is considered acceptable.
+hypre is subject to the LGPL license version 2.1, which is considered acceptable since hypre is one of the original xSDK members.
 ```
 
 **M8.** Provide a runtime API to return the current version number of the software.
@@ -49,12 +49,12 @@ hypre provides a script that prints the version number, date, and time.
 
 **M9.** Use a limited and well-defined symbol, macro, library, and include file name space.
 ```
-hypre satisfies this requirement by pre-pending macros, libraries and include file names with "HYPRE_" to avoid namespace collisions with other packages.
+hypre satisfies this requirement by pre-pending macros, libraries and include file names with "HYPRE_" and "_hypre" to avoid namespace collisions with other packages.
 ```
 
 **M10.** Provide an xSDK team accessible repository (not necessarily publicly available).
 ```
-hypre is compliant. hypre pushes updated versions to github, which is accessible by the xSDK team.
+hypre is compliant. hypre releases are mirrored on github, which is accessible by the xSDK team.
 ```
 
 **M11.** Have no hardwired print or IO statements that cannot be turned off.
@@ -92,7 +92,7 @@ hypre is compliant
 
 **R1.** Have a public repository.
 ```
-hypre does not have a public repository, but pushes updated versions to github.
+hypre does not have a public development repository, but mirrors hypre versions, including test versions as needed, on github.
 ```
 
 **R2.** Possible to run test suite under valgrind in order to test for memory corruption issues.
