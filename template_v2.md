@@ -11,7 +11,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| Use CMake. |
+|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| Use CMake. [M1 details](#m1-details)|
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| None. |
 |**M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD). |Full| None. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| None. |
@@ -27,6 +27,8 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Packages supports both 32 and 64 bit under same API. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| None. |
 |**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| None. |
+
+M1 details <a id="m1-details"></a>: (extensive details about CMake usage.)
 
 ### Recommended Policies
 
