@@ -26,11 +26,11 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| PETSc include files all begin with petsc. The libraries begin with libpetsc. Macros and symbols begin with PETSc or a small set of other prefixes. The symbol/macro space is larger than it should be.  |
 |**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| [https://bitbucket.org/petsc/petsc](https://bitbucket.org/petsc/petsc) |
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| None. |
-|**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| None. |
-|**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| None. |
+|**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| For each external package xxx, PETSc supports both the configure option --with-xxx-dir to use an externally built version and --download-xxx to install the package. PETSc does not contain any other package's source code within  |
+|**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| PETSc's configure uses the usual --prefix option. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Packages supports both 32 and 64 bit under same API. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| None. |
-|**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| None. |
+|**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| PETSc configure and install has full support from Spack. |
 
 M9 details <a id="m9-details"></a>: (Explanation goes here.)
 
