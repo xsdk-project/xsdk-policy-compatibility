@@ -22,7 +22,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| PETSc developers can be contacted via the https://bitbucket.org/petsc/petsc/issues?status=new&status=open issues on Bitbucket or via email petsc-maint@mcs.anl.gov |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| None. |
 |**M7.** Come with an open source (BSD style) license. |Full| Use 2-clause BSD license. |
-|**M8.** Provide a runtime API to return the current version number of the software. |Full| None. |
+|**M8.** Provide a runtime API to return the current version number of the software. |Full| PetscGetVersion() and PetscGetVersionNumber() |
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| [M9 details](#m9-details) |
 |**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| [https://bitbucket.org/petsc/petsc](https://bitbucket.org/petsc/petsc) |
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| None. |
