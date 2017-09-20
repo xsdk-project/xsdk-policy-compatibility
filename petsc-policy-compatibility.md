@@ -39,8 +39,8 @@ M9 details <a id="m9-details"></a>: (Explanation goes here.)
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
 |**R1.** Have a public repository. |Full| [https://bitbucket.org/petsc/petsc](https://bitbucket.org/petsc/petsc) |
-|**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| None. |
-|**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| None. |
-|**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
-|**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| None. |
+|**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| PETSc has this capacity and runs the test suite under valgrind each night. |
+|**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| PETSc uses error codes from Fortran and C/C++ to report all error conditions. After each function is called the error code is checked to determine if the code can continue or must be terminated. It uses this checking to produce stack traces by default when errors are detected. |
+|**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| PETSc tests use valgrind, MPICH options, and internal code to report any resources or memory that are not freed before the problem completes. |
+|**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| make getlinklibs lists all dependencies for an install, PETSc also provides pkgconfig and module files.
 
