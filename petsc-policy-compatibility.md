@@ -15,8 +15,8 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| Use GNU Autoconf options|
-|**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| None. |
+|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| PETSc uses the GNU Autoconf options. The implementation is done with python code|
+|**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| PETSc has over 1000 test examples and a test harness that can execute the examples in parallel. It also collects information on the failures and can display them graphically ftp://ftp.mcs.anl.gov/pub/petsc/nightlylogs/archive/2017/09/19/master.html |
 |**M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD). |Full| None. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| None. |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| None. |
