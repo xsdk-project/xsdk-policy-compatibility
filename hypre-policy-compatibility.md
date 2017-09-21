@@ -3,8 +3,6 @@
 This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://docs.google.com/document/d/1DCx2Duijb0COESCuxwEEK1j0BPe2cTIJ-AjtJxt3290/edit#heading=h.2hp5zbf0n3o3)
 and should be considered when filling out this form.
 
-*** A good example of how to complete this form can be found in the [PETSc version](https://github.com/xsdk-project/xsdk-policy-compatibility/blob/master/petsc-policy-compatibility.md).
-
 Please, provide information on your compability status for each mandatory policy, and if possible also for recommended policies.
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
 For current xSDK member packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
@@ -13,7 +11,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| *hypre* supports xSDK community GNU Autoconf. [M1 details](#m1-details)|
+|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| *hypre* supports xSDK community GNU Autoconf. |
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| *hypre* provides a script (make checkpar) that runs a subset of the daily regression tests to satisfy this requirement. |
 |**M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD). |Full| None. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| Being written entirely in C, *hypre* has generally been very portable, and will continue to be due to strong customer demand. In addition, daily/weekly regression tests are performed on various architectures with different compilers.|
