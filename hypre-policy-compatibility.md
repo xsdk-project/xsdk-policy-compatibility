@@ -37,6 +37,6 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |------------------------|-------|-------------------------|
 |**R1.** Have a public repository. |Partial| The development repository is private, but releases, including test releases as needed, are mirrored on github. https://github.com/LLNL/hypre |
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| *hypre* has completely moved to valgrind for memory regression tests. |
-|**R3.** Adopt and document consistent system for error conditions/exceptions. |Partial | *hypre* has a system for error conditions, which has not been completely implemented in the whole library. |
-|**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
+|**R3.** Adopt and document consistent system for error conditions/exceptions. |Partial | *hypre* has a system for error conditions, Which is documented in the users guide, but has not been completely implemented throughout the whole library. |
+|**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| All resources are freed as soon as they are no longer needed as long as the required functions are used to free them, as described in the users and reference manuals. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |None| None. |
