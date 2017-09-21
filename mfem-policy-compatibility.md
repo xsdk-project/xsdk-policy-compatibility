@@ -1,4 +1,4 @@
-# xSDK Community Policy Compatibility for MFEM>
+# xSDK Community Policy Compatibility for MFEM
 
 This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://docs.google.com/document/d/1DCx2Duijb0COESCuxwEEK1j0BPe2cTIJ-AjtJxt3290/edit#heading=h.2hp5zbf0n3o3)
 and should be considered when filling out this form.
@@ -6,8 +6,6 @@ and should be considered when filling out this form.
 Please, provide information on your compability status for each mandatory policy, and if possible also for recommended policies.
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
 For current xSDK member packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy.This information will be helpful for future xSDK member packages.
-
-**[Form in progress ... not yet completed.]**
 
 **Website:**  https://www.mfem.org
 
@@ -32,7 +30,6 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| Changes are being targeted to the master branch of MFEM.|
 |**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| MFEM configure and install has full support from Spack. |
 
-M9 details <a id="m9-details"></a>: (Explanation goes here.)
 
 ### Recommended Policies
 
