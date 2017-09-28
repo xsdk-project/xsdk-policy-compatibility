@@ -13,8 +13,8 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support xSDK community GNU Autoconf or CMake options. |Partial| SUNDIALS uses CMake and supports most xSDK CMake variables. [M1 details](#m1-details)|
-|**M2.** Provide a comprehensive test suite for correctness of installation verification. |No| SUNDIALS test suite is not currently released to users. [M2 details](#m2-details) |
+|**M1.** Support xSDK community GNU Autoconf or CMake options. |Partial| SUNDIALS uses CMake and supports most xSDK CMake variables. The only outstanding requirement is providing 'make test_install' functionality.|
+|**M2.** Provide a comprehensive test suite for correctness of installation verification. |No| The SUNDIALS test suite is not currently released to users as it relies on comparing test program outputs against reference files which may differ depending on the configuration/architecture. We are working on improving the portability of the SUNDIALS test suite. |
 |**M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD). |Full| SUNDIALS MPI vector constructors take an MPI communicator as input. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Partial| SUNDIALS is tested with GNU compilers on Linux and and LLNL clusters. User documentation needs to be updated with compatible versions of (optional) thrid party libraries. |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| The SUNDIALS development team can be reached through the user mailing list via email to sundials-users@llnl.gov or the contact information at https://computation.llnl.gov/projects/sundials/team. |
@@ -29,10 +29,6 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| None. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| All xSDK related changes will be merged into the SUNDIALS master branch for release. |
 |**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| SUNDIALS can be configured and installed with Spack. |
-
-M1 details <a id="m1-details"></a>: SUNDIALS is compliant with all installation policies except 3b (handeling CPP and CPPFLAGS environment variables) and 12 (providing 'make test_install' functionality).
-
-M2 details <a id="m2-details"></a>: The SUNDIALS test suite is not currently released to users as it relies on comparing test program outputs against reference files which may differ depending on the configuration/architecture. We are working on improving the portability of the SUNDIALS test suite.
 
 ### Recommended Policies
 
