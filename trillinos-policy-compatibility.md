@@ -14,7 +14,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
 |**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| Trillinos uses the CMake options. |
-|**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| Trilinos has over 1000 test examples and a test harness that can be built and executed through CTest. It also collects information on the failures and can display them, e.g., ??? |
+|**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| Trilinos has over 1000 test examples and a test harness that can be built and executed through CTest. It also collects information on the failures and can display them. |
 |**M3.** Employ user provided MPI communicator (no MPI_COMM_WORLD). |Full| All Trilinos class objects take a MPI communicator in the constructor, allowing the user complete control over where each object exists and performs its computations. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| To enable the full capability, Trilinos requires compilers with C++11 support; e.g. GNU 4.8.4 or later. There is an option to disable all C++11 modules. |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| Trilinos developers developers can be contacted either via email (trilinos-help@software.sandia.gov) or Trilinos-Users ML https://trilinos.org/mailman/listinfo/trilinos-users. |
