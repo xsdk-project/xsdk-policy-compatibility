@@ -23,7 +23,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M8.** Provide a runtime API to return the current version number of the software. |Full| <tt>superlu_dist_GetVersionNumber()</tt> |
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| SuperLU include files all begin with <tt>superlu_</tt>. The libraries begin with <tt>libsuperlu</tt>. Macros and symbols begin with <tt>SUPERLU</tt> or a small set of other prefixes. |
 |**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| [https://github.com/xiaoyeli/superlu_dist](https://github.com/xiaoyeli/superlu_dist) |
-|**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full|Currently, amount of IO is controlled by CPP -DPRNTlevel= 1,2, .... In the future, will change it to be controlled at runtime. |
+|**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full|Currently, amount of IO is controlled by CPP definition -DPRNTlevel= 1,2, ....  In the future, will change it to be controlled at runtime. |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| Yes. No other package's source code is contained within SuperLU.|
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| Use the standard CMake --prefix path. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| SuperLU supports both 32 and 64 bit under same API. |
