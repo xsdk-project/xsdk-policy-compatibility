@@ -7,7 +7,8 @@ and should be considered when filling out this form.
 
 Please, provide information on your compability status for each mandatory policy, and if possible also for recommended policies.
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
-For current xSDK member packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
+
+For current xSDK member packages: If you were not fully compatible at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
 
 **Website:** \<package website\>
 
@@ -15,8 +16,8 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| Use CMake. [M1 details](#m1-details)|
-|**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| None. |
+|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| Short-expanation-here; optional link for more extensive details if needed, see below. [M1 details](#m1-details)|
+|**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| Short-expanation-here; optional link for more extensive details if needed, see below. [M2 details](#m2-details)|
 |**M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD). |Full| None. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| None. |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| None. |
@@ -32,7 +33,9 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| None. |
 |**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| None. |
 
-M1 details <a id="m1-details"></a>: (extensive details about CMake usage.)
+M1 details <a id="m1-details"></a>: optional: provide more details about approach to addressing topic M1.
+
+M2 details <a id="m2-details"></a>: optional: provide more details about approach to addressing topic M2.
 
 ### Recommended Policies
 
