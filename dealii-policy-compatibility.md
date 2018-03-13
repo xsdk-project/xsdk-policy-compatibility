@@ -38,5 +38,5 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**R1.** Have a public repository. |Full | http://github.com/dealii/dealii |
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. | Full | Yes, see http://dealii.org/developer/developers/testsuite.html . |
 |**R3.** Adopt and document consistent system for error conditions/exceptions. | Yes | Yes, we have a system of macros that is uniformly used for this. Errors either lead to termination of the program if, for example, a function is called with invalid arguments (but this can be switched to reporting C++ exceptions). All other error conditions lead to throwing C++ exceptions. |
-|**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| Yes, that's the goal. |
+|**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| Yes, that's the goal, with the exception of the GrowingVectorMemory class that keeps a global cache of vectors for re-use in contexts where frequent allocation/deallocation of vectors happens. The cached vectors can, however, be explicitly freed when necessary. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |None| Via cmake. |
