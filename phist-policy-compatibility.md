@@ -1,9 +1,7 @@
-# xSDK Community Policy Compatibility for \<package\>
+# xSDK Community Policy Compatibility for phist
 
 This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://docs.google.com/document/d/1DCx2Duijb0COESCuxwEEK1j0BPe2cTIJ-AjtJxt3290/edit#heading=h.2hp5zbf0n3o3)
 and should be considered when filling out this form.
-
-*** A good example of how to complete this form can be found in the [PETSc version](https://github.com/xsdk-project/xsdk-policy-compatibility/blob/master/petsc-policy-compatibility.md).
 
 Please, provide information on your compability status for each mandatory policy, and if possible also for recommended policies.
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
@@ -26,14 +24,20 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M8.** Provide a runtime API to return the current version number of the software. |Full| See related functions in phist_tools.h |
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| None. |
 |**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| https://bitbucket.org/essex/phist |
-|**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| Can set cmake option PHIST_OUTLEV=0 and redirect output to a C++ stream or C FILE (cf. phist_tools.h). |
+|**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| Can set cmake option PHIST_OUTLEV=0 or redirect output to a C++ stream or C FILE (cf. phist_tools.h). |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| None. |
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| None. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Supports only 64-bit pointers. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| None. |
 |**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| Phist can be installed via spack. |
 
-M1 details <a id="m1-details"></a>: optional: initial steps have been taken to support the xSDK cmake flags. We intend to increase the compatibility gradually until all flags are supported.
+M1 details <a id="m1-details"></a>: initial steps have been taken to support the xSDK cmake flags. We intend to increase the compatibility gradually until all flags are supported.
+
+Currently the following flags are NOT supported
+
+- XSDK_ENABLE_Fortran: building the Fortran bindings on phist requires the external tool [phist_fort](https://bitbucket.org/essex/phist_fort), which is not a part of phist because it uses a GPL license.
+setting the cmake flag will therefore only print a corresponding warning message. We are looking for ways to integrate the Fortran bindings generator into phist without making phist GPL.
+- TPL_ENABLE_<PACKAGE\>. Which TPL's are supported by phist depends on the kernel library. For instance, with the builtin kernels one cn use ParMETIS for repartitioning, with Epetra onee can use Isorropia. PHIST therefore has flags like PHIST_USE_GRAPH_TPLS, which means: check if you can find ParMETIS or whatever you support given the kernel library.
 
 M2 details <a id="m2-details"></a>: There is an extensive suite of unit and integration tests, which can be run using 'make test' after building the libraries (using 'make'). A `smoke test' after installation can be performed using 'make test_install'. The extensive test suite is an essential feature of phist because it also tests the underlying kernel library for correctness, trying e.g. to detect hard-to-find errors due to lack of data alignment.
 
@@ -44,6 +48,6 @@ M2 details <a id="m2-details"></a>: There is an extensive suite of unit and inte
 |------------------------|-------|-------------------------|
 |**R1.** Have a public repository. |Full| Repo is publicly accessible (read-only), contributions are welcome via pull requests. |
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| This is possible but we recommend using the gcc address sanitizer (cmake option GCC_SANITZE=address). |
-|**R3.** Adopt and document consistent system for error conditions/exceptions. |None| All functions return an error code via the last argument (similar to MPI), the C++ interface optionally throws an exception in addition. |
+|**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| All functions return an error code via the last argument (similar to MPI), the C++ interface optionally throws an exception in addition. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
-|**R5.** Provide a mechanism to export ordered list of library dependencies. |None| None. |
+|**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| installs phistLibraries.cmake and a pkg-config file phist.pc, and provides an API call (cf. phist_tools.h)|
