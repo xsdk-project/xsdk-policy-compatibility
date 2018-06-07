@@ -1,4 +1,4 @@
-# xSDK Community Policy Compatibility for phist
+# xSDK Community Policy Compatibility for PHIST
 
 This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://docs.google.com/document/d/1DCx2Duijb0COESCuxwEEK1j0BPe2cTIJ-AjtJxt3290/edit#heading=h.2hp5zbf0n3o3)
 and should be considered when filling out this form.
@@ -35,8 +35,6 @@ M1 details <a id="m1-details"></a>: initial steps have been taken to support the
 
 Currently the following flags are NOT supported
 
-- XSDK_ENABLE_Fortran: building the Fortran bindings on phist requires the external tool [phist_fort](https://bitbucket.org/essex/phist_fort), which is not a part of phist because it uses a GPL license.
-setting the cmake flag will therefore only print a corresponding warning message. We are looking for ways to integrate the Fortran bindings generator into phist without making phist GPL.
 - TPL_ENABLE_<PACKAGE\>. Which TPL's are supported by phist depends on the kernel library. For instance, with the builtin kernels one cn use ParMETIS for repartitioning, with Epetra onee can use Isorropia. PHIST therefore has flags like PHIST_USE_GRAPH_TPLS, which means: check if you can find ParMETIS or whatever you support given the kernel library.
 
 M2 details <a id="m2-details"></a>: There is an extensive suite of unit and integration tests, which can be run using 'make test' after building the libraries (using 'make'). A `smoke test' after installation can be performed using 'make test_install'. The extensive test suite is an essential feature of phist because it also tests the underlying kernel library for correctness, trying e.g. to detect hard-to-find errors due to lack of data alignment.
