@@ -22,9 +22,9 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| None. |
 |**M7.** Come with an open source (BSD style) license. |Full| Ginkgo uses 3-clause BSD license. |
 |**M8.** Provide a runtime API to return the current version number of the software. |__TODO__| None. |
-|**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| All ginkgo functions and classes are in the `gko::` namespace. All macros have a `GKO_` prefix. All header files are installed in the `ginkgo/` subidrectory. All shared libraries have a `ginkgo` prefix. |
+|**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| All ginkgo functions and classes are in the `gko::` namespace. All macros have a `GKO_` prefix (__TODO__: fix some problems with this). All header files are installed in the `ginkgo/` subidrectory. All shared libraries have a `ginkgo` prefix. |
 |**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| [github.com/ginkgo-project/ginkgo](https://github.com/ginkgo-project/ginkgo). |
-|**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| None. |
+|**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| None. __TODO__: there's 1 or 2 of those that output an error message on `stderr` before everything crashes - in cases of an unrecoverable exception. Not sure if this is a problem. |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| Done through CMake's `find_package`. |
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| None. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Packages supports both 32 and 64 bit under same API. |
@@ -40,7 +40,7 @@ M2 details <a id="m2-details"></a>: optional: provide more details about approac
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
 |**R1.** Have a public repository. |Full| [github.com/ginkgo-project/ginkgo](https://github.com/ginkgo-project/ginkgo) |
-|**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| None. |
+|**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| None.  __TODO__: verify this. |
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| Ginkgo reports errors through exceptions inherited from `std::exception`. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |__TODO__| None. |
