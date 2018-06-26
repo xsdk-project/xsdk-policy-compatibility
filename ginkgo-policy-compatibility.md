@@ -21,7 +21,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| The developers can be contacted via [github issues](https://github.com/ginkgo-project/ginkgo/issues). |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| None. |
 |**M7.** Come with an open source (BSD style) license. |Full| Ginkgo uses 3-clause BSD license. |
-|**M8.** Provide a runtime API to return the current version number of the software. |__TODO__| None. |
+|**M8.** Provide a runtime API to return the current version number of the software. | Full | Ginkgo provides the `gko::version_info` class which can be used to query version details. |
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| All ginkgo functions and classes are in the `gko::` namespace. All macros have a `GKO_` prefix (__TODO__: fix some problems with this). All header files are installed in the `ginkgo/` subidrectory. All shared libraries have a `ginkgo` prefix. |
 |**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| [github.com/ginkgo-project/ginkgo](https://github.com/ginkgo-project/ginkgo). |
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| None. __TODO__: there's 1 or 2 of those that output an error message on `stderr` before everything crashes - in cases of an unrecoverable exception. Not sure if this is a problem. |
