@@ -19,14 +19,15 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| AMReX is tested nightly with GNU compilers on Linux machines, and regularly with other compilers. |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| AMReX developers can be contacted via issues on github (https://github.com/AMReX-Codes/amrex)|
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| |
-|**M7.** Come with an open source (BSD style) license. |Full| AMReX is released with modified BSD license. |
-|**M8.** Provide a runtime API to return the current version number of the software. |Full| <tt>PetscGetVersion()</tt> and <tt>PetscGetVersionNumber()</tt> |
-|**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| PETSc include files all begin with <tt>petsc</tt>. The libraries begin with <tt>libpetsc</tt>. Macros and symbols begin with <tt>PETSc</tt> or a small set of other prefixes. The symbol/macro space is larger than it should be since it has prefixes such as <tt>Vec</tt>, <tt>Mat</tt>, <tt>KSP</tt>. These have not been removed since it would require changes to all PETSc codes. Surprisingly we have not had reports of symbol conflicts, which is why we have not fixed this potential problem. |
+|**M7.** Come with an open source (BSD style) license. |Full| AMReX is released with the 3-clause BSD license. |
+|**M8.** Provide a runtime API to return the current version number of the software. |Full| <tt>amrex::Version()</tt> returns the current version of AMReX.|
+|**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| |
+
 |**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| [https://github.com/AMReX-code/amrex] |
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| All of AMReX's I/O can be turned of at runtime. |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| This is the standard approach taken by AMReX.|
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full|  AMReX CMake uses the usual CMAKE_INSTALL_PREFIX variable.|
-|**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| AMReX support 64 bit pointers. |
+|**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| AMReX supports 64 bit pointers. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| We have incorporated the xSDK compatibility changes fully into the basic AMReX infrastructure, so that xSDK options get the same maintenance and support as any other feature of AMReX.  |
 |**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| AMReX can be configured and installed with Spack. |
 
@@ -34,7 +35,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**R1.** Have a public repository. |Full| [https://github.com/AMReX-Codes] |
+|**R1.** Have a public repository. |Full| [https://github.com/AMReX-Codes/amrex] |
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| AMReX tests and tutorials can be run under valgrind.|
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |No| |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| 
