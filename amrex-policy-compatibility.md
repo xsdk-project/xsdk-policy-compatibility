@@ -18,11 +18,10 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD). |Full| AMReX can take a user-provided MPI communicator.|
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| AMReX is tested nightly with GNU compilers on Linux machines, and regularly with other compilers. |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| AMReX developers can be contacted via issues on github (https://github.com/AMReX-Codes/amrex)|
-|**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| |
+|**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| By default, AMReX installs its own signal handler for SIGSEGV, SIGFPE, etc. and saves the previously set handlers in `amrex::Initialize()`.  When `amrex::Finalize` is called, AMReX's signal handler is removed and the previous ones are restored.  Moreover, applications can use an AMReX runtime boolean parameter `amrex.signal_handling` to disable signal handling by AMReX.  This parameter can be set by a function call, or in an inputs file, or passed in command line. |
 |**M7.** Come with an open source (BSD style) license. |Full| AMReX is released with the 3-clause BSD license. |
 |**M8.** Provide a runtime API to return the current version number of the software. |Full| <tt>amrex::Version()</tt> returns the current version of AMReX.|
-|**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| |
-
+|**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full|All AMReX header file names start with `AMReX_`.  All C++ symbols are inside `namespace amrex`, and all C and Fortran symbols are prefixed with `amrex_` or `bl_`.  All preprocessor macros begin with `AMREX_` or `BL_`.  The library is named libamrex. |
 |**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| [https://github.com/AMReX-code/amrex] |
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| All of AMReX's I/O can be turned of at runtime. |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| This is the standard approach taken by AMReX.|
