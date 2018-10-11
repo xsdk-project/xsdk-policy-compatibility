@@ -18,7 +18,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |------------------------|-------|-------------------------|
 |**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| Short-expanation-here; optional link for more extensive details if needed, see below. [M1 details](#m1-details)|
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| Short-expanation-here; optional link for more extensive details if needed, see below. [M2 details](#m2-details)|
-|**M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD). |Full| None. |
+|**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 2 or MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full| None. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| None. |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| None. |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| None. |
