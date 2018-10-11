@@ -46,4 +46,4 @@ M2 details <a id="m2-details"></a>: optional: provide more details about approac
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |None| None. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |None| None. |
-|**R6.** Document versions of packages that it works with or depends upon. |None| None. | 
+|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |None| None. | 
