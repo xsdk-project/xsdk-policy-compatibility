@@ -26,7 +26,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M8.** Provide a runtime API to return the current version number of the software. |Full| None. |
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| Everything is included in the (C++) strumpack namespace. Headers are organized in subfolders. |
 |**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| Open GitHub repo: https://github.com/pghysels/STRUMPACK |
-|**M11.** Have no hardwired print or IO statements that cannot be turned off. |Mostly| Warning messages are printed to sterr. |
+|**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| Some warning messages are printed to sterr. |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| No libraries are bundled with STRUMPACK. External dependencies are METIS, BLAS, LAPACK, ScaLAPACK/BLACS (required), and optional: ParMETIS, (PT)Scotch, PAPI. |
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| CMAKE_INSTALL_PREFIX=directory. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Packages supports both 32 and 64 bit under same API. |
