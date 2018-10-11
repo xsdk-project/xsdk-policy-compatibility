@@ -19,7 +19,7 @@ and should be considered when filling out this form.
 |**M8.** Provide a runtime API to return the current version number of the software. |Full| None. [(patch)](https://github.com/cwsmith/core/commit/1e64d7d761ec195f04c071a11e419cd4a361aaf1)|
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| None. |
 |**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| https://github.com/SCOREC/core/ |
-|**M11.** Have no hardwired print or IO statements that cannot be turned off. |needs work| We have print statements to stdout/err all over the place. |
+|**M11.** Have no hardwired print or IO statements that cannot be turned off. | Full | None. |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| None. |
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| None. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| We have not recently tested a 32 bit build. |
