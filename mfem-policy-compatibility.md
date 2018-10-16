@@ -13,7 +13,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support xSDK community GNU Autoconf or CMake options. |Partial| MFEM uses CMake, but currently does not support the XSDK specific CMAKE variables.|
+|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| MFEM uses CMake and supports the XSDK CMAK variables.|
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| MFEM has a significant number of unit tests and regression tests that can be used to verify proper installation. |
 |**M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD). |Full| In all normal situations a user provided comm can be provided.  During fatal error conditions a call to MPI_Abort is made in MPI_COMM_WORLD.  If this is a problem we can update it.|
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| MFEM compilation is currently tested on GNN and Clang compilers on linux and OSX, as well as numerous LLNL clusters.|
