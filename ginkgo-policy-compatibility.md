@@ -8,7 +8,7 @@ If you are not compatible, state what is lacking and what are your plans on how 
 
 For current xSDK member packages: If you were not fully compatible at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
 
-**Website:** [github.com/ginkgo-project/ginkgo](https://github.com/ginkgo-project/ginkgo)
+**Website:** [ginkgo-project.github.io](https://ginkgo-project.github.io/)
 
 ### Mandatory Policies
 
@@ -29,7 +29,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| We use the standard `CMAKE_INSTALL_PREFIX` option. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Packages supports both 32 and 64 bit under same API. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| Ginkgo aims to be fully xSDK compatible with its first 1.0.0 release. |
-|**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full?| Ginkgo should be compatible with the spack tool thanks to the provided CMake options. No integration has been done yet. |
+|**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| Ginkgo has a spack package available. |
 
 ### Recommended Policies
 
@@ -39,5 +39,5 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| Ginkgo uses CTest which has this feature. A suppressions list is also provided for convenience. |
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| Ginkgo reports errors through exceptions inherited from `std::exception`. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
-|**R5.** Provide a mechanism to export ordered list of library dependencies. |None| This is done via standard CMake. |
-|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |None|This is available through CMake. | 
+|**R5.** Provide a mechanism to export ordered list of library dependencies. |None| None. |
+|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |None|None. | 
