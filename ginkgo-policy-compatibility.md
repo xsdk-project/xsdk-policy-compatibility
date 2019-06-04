@@ -25,11 +25,27 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| All ginkgo functions and classes are in the `gko::` namespace. All macros have a `GKO_` prefix. All header files are installed in the `ginkgo/` subidrectory. All shared libraries have a `ginkgo` prefix.|
 |**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| github.com/ginkgo-project/ginkgo](https://github.com/ginkgo-project/ginkgo). |
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| Everything is handled through exceptions or the user controlled `gko::Log` class. A few direct IO statements are used in case of important failure and can be disabled at compile time. |
-|**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| Done through CMake's `find_package`. By default, Ginkgo uses its own version of the subpackages but this behavior can be overridden by using the CMake option `-DGINKGO_USE_EXTERNAL_<package>=ON`. |
+|**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| Done through CMake's `find_package`. By default, Ginkgo uses its own version of the subpackages but this behavior can be overridden by using the CMake option `-DGINKGO_USE_EXTERNAL_<PACKAGE\>=ON` or with `-DTPL_ENABLE_<PACKAGE\>=ON`. See [M1 details](#m1-details) for more information. |
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| We use the standard `CMAKE_INSTALL_PREFIX` option. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Packages supports both 32 and 64 bit under same API. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| Ginkgo aims to be fully xSDK compatible with its first 1.0.0 release. |
 |**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| Ginkgo has a spack package available. |
+
+
+M1 details <a id="m1-details"></a>: Ginkgo supports all relevant CMake flags.
+Particularly, the `TPL_ENABLE_<PACKAGE\>`, `TPL_<PACKAGE\>_LIBRARIES` and
+`TPL_<PACKAGE\>_INCLUDE_DIRS` flags are supported.
+When building ginkgo benchmarks, tests, examples or documentation Ginkgo relies
+on some external tools (such as gtest and gflags). Instead of automatically
+installing these tools, the user can use a local version either by using
+Ginkgo's CMake flags or the TPL specific flags. These packages are required only
+when building Ginkgo, but not during the installation step which only installs
+Ginkgo's core libraries.
+
+
+M2 details <a id="m2-details"></a>: There is an extensive unit test suite
+available at build time completed with a smoke test which can be ran by calling
+`make test_install`.
 
 ### Recommended Policies
 
@@ -39,5 +55,5 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| Ginkgo uses CTest which has this feature. A suppressions list is also provided for convenience. |
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| Ginkgo reports errors through exceptions inherited from `std::exception`. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
-|**R5.** Provide a mechanism to export ordered list of library dependencies. |None| None. |
+|**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| This information is available through a pkg-config file and the CMake exported targets. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |None|None. | 
