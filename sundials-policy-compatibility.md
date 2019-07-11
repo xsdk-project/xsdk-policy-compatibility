@@ -1,6 +1,6 @@
 # xSDK Community Policy Compatibility for SUNDIALS
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://docs.google.com/document/d/1DCx2Duijb0COESCuxwEEK1j0BPe2cTIJ-AjtJxt3290/edit#heading=h.2hp5zbf0n3o3)
+This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
 Please, provide information on your compatibility status for each mandatory policy, and if possible also for recommended policies.
@@ -15,7 +15,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |------------------------|-------|-------------------------|
 |**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| SUNDIALS uses CMake, supports all xSDK CMake variables, provides 'make test' and 'make test_install' targets.|
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| The SUNDIALS utilizes CTest to run a set of regression tests using the 'make test' command after building. |
-|**M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD). |Full| SUNDIALS MPI vector constructors take an MPI communicator as input. |
+|**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full| SUNDIALS MPI vector constructors take an MPI communicator as input. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| SUNDIALS is tested with GNU compilers on Linux and and LLNL clusters. |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| The SUNDIALS development team can be reached through the user mailing list via email to sundials-users@llnl.gov or the contact information at https://computation.llnl.gov/projects/sundials/team. |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| None. |
@@ -39,3 +39,6 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| SUNDIALS functions return positive/negative error codes to report recoverable/unrecoverable failures. User callable functions are provided to get the last returned flag value and name. Error codes are documented in the SUNDIALS user guides.|
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| The SUNDIALS user guides document the necessary function calls to free any allocated memory by SUNDIALS solvers. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |No| None. |
+|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Partial| The SUNDIALS user guides document versions of dependencies it works with. |
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| SUNDIALS has a README and LICENSE file. |
+
