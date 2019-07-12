@@ -1,6 +1,6 @@
 # xSDK Community Policy Compatibility for Ginkgo
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://docs.google.com/document/d/1DCx2Duijb0COESCuxwEEK1j0BPe2cTIJ-AjtJxt3290/edit#heading=h.2hp5zbf0n3o3)
+This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
 Please, provide information on your compability status for each mandatory policy, and if possible also for recommended policies.
@@ -16,7 +16,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |------------------------|-------|-------------------------|
 |**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| Ginkgo uses CMake.|
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| Ginkgo contains a comprehensive set of unit tests which can be run individually, or all at once via CTest.|
-|**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 2 or MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full|Ginkgo is an on-node library, so it does not utilize MPI. |
+|**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full| Ginkgo is an on-node library, so it does not utilize MPI. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| Ginkgo supports any C++11 compliant compiler. Compatibility with the newest versions of GNU and Clang compilers is automatically verified via CI. |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| The developers can be contacted via [github issues](https://github.com/ginkgo-project/ginkgo/issues) or through the ginkgo.library@gmail.com address. |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| None. |
@@ -57,3 +57,4 @@ available at build time completed with a smoke test which can be ran by calling
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| This information is available through a pkg-config file and the CMake exported targets. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |None|None. | 
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Full | Ginkgo provides `README.md`, `LICENSE` and `CHANGELOG.md` files. Support information is available as part of the `README.md`. |
