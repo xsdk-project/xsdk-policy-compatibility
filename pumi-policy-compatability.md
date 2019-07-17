@@ -55,3 +55,5 @@ GNU Autoconf and CMake Options](https://figshare.com/articles/xSDK_Community_Ins
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |None| None. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |partial| We provide a CMake package for other users of CMake; [example](https://github.com/SCOREC/core/blob/master/doc/user_CMakeLists.cmake). |
+|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  | Partial | We specify the required versions of Omega_h and Simmetrix SimModSuite in our CMake files.  The required ParMETIS, Zoltan, and BZip versions are not specified.  |
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  | Partial | We provide README and LICENSE but not SUPPORT and CHANGELOG files. |
