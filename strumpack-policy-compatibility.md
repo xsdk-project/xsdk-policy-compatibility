@@ -45,3 +45,5 @@ M2 details <a id="m2-details"></a>: STRUMPACK builds 4 test programs, (seq, par)
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |None| Code will simply abort in certain failure cases, return error code in other cases. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Partial| Running STRUMPACK CMake generates an example Makefile. |
+|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |None| None. |
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Full| None. |
