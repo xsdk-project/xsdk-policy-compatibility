@@ -39,3 +39,5 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| Omega_h has a compile option `-DOmega_h_THROW:BOOL=ON` that enables consistent exceptions. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| We do. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| Omega_h's build system exports such text files. |
+|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  | Partial | For packages in Spack, this is documented in the Spack package file. |
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  | Partial | We have README and LICENSE. |
