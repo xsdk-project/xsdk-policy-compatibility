@@ -45,3 +45,5 @@ M2 details <a id="m2-details"></a>: There is an extensive suite of unit and inte
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| All functions return an error code via the last argument (similar to MPI), the C++ interface optionally throws an exception in addition. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| installs phistLibraries.cmake and a pkg-config file phist.pc, and provides an API call (cf. phist_tools.h)|
+|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.	|Partial| Only available in CMake files and via spack. |
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory. | SUPPORT file is missing (information available in README.md) |
