@@ -36,7 +36,8 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |------------------------|-------|-------------------------|
 |**R1.** Have a public repository. |Full| https://github.com/ORNL/TASMANIAN  |
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| Tasmanian is tested under `valgrind` on a daily basis. |
-|**R3.** Adopt and document consistent system for error conditions/exceptions. |*Partial*| The Python interface has comprehensive error handling, C++ has a basic set of consistency checks. |
+|**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| Documented C++ and Python exceptions are extensively used in the respective interfaces; command line and MATLAB interfaces come with comprehensive error messages. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| Memory leaks tested daily with valgrind. Prompt release of resource is integrated in the library design. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| The spack package provides a full list of dependencies, the manual lists all tested compilers and libraries. |
-
+|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form. |*Partial*| The detailed installation instructions come with a full list of tested external dependencies (available on github and doxygen, but not machine readable). |
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory. |Full| All files are included in the repository. |
