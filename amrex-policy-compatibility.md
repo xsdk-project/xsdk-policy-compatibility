@@ -22,7 +22,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M7.** Come with an open source (BSD style) license. |Full| AMReX is released with the 3-clause BSD license. |
 |**M8.** Provide a runtime API to return the current version number of the software. |Full| <tt>amrex::Version()</tt> returns the current version of AMReX.|
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full|All AMReX header file names start with `AMReX_`.  All C++ symbols are inside `namespace amrex`, and all C and Fortran symbols are prefixed with `amrex_` or `bl_`.  All preprocessor macros begin with `AMREX_` or `BL_`.  The library is named libamrex. |
-|**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| [https://github.com/AMReX-code/amrex] |
+|**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| [https://github.com/AMReX-codes/amrex] |
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| All of AMReX's I/O can be turned of at runtime. |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| This is the standard approach taken by AMReX.|
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full|  AMReX CMake uses the usual CMAKE_INSTALL_PREFIX variable.|
