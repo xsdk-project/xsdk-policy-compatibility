@@ -39,7 +39,7 @@ M2 details <a id="m2-details"></a>: optional: provide more details about approac
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**R1.** Have a public repository. |Partial| Repo is access controlled but available as release tarfile. |
+|**R1.** Have a public repository. |Partial| Repo is currently access controlled but available as release tarfile. It shall soon in a publically readable GIT repository. |
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| Sure, see the `scripts/callgrind.sh` script. |
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| There is a `rsb_perror()` function, and many numerical return error codes, and many more options for that, including verbosity levels and optional stack tracing . |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| Sure: debug-enabled librsb has `rsb_lib_exit` finalization routine even check for correct deallocation of memory resources. |
