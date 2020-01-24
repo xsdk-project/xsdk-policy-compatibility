@@ -45,4 +45,4 @@ M2 details <a id="m2-details"></a>: optional: provide more details about approac
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| Sure: debug-enabled librsb has `rsb_lib_exit` finalization routine even check for correct deallocation of memory resources. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| Sure: invoking `librsb-config --ldflags`. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Full| It depends on a C/Fortran compiler with OpenMP, plus `libhwloc` and `rpc/xdr.h`, and that is being checked by the `configure` script. |
-|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| README is there, LICENSE no but COPYNG yes, and CHANGELOG empty but changelog info is in the README. A SUPPORT file may be added. |
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| README is there, LICENSE no but COPYNG yes, and CHANGELOG empty but changelog info is in the NEWS. A SUPPORT file may be added. |
