@@ -1,4 +1,4 @@
-# xSDK Community Policy Compatibility for \<package\>
+# xSDK Community Policy Compatibility for heFFTe
 
 This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
