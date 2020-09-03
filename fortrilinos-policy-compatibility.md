@@ -3,13 +3,6 @@
 This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
-*** A good example of how to complete this form can be found in the [PETSc version](https://github.com/xsdk-project/xsdk-policy-compatibility/blob/master/petsc-policy-compatibility.md).
-
-Please, provide information on your compability status for each mandatory policy, and if possible also for recommended policies.
-If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
-
-For current xSDK member packages: If you were not fully compatible at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
-
 **Website:** \<package website\>
 
 ### Mandatory Policies
@@ -23,7 +16,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| Add a github issue or contact authors. |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| Not applicable |
 |**M7.** Come with an open source (BSD style) license. |Full| Use 3-clause BSD license. |
-|**M8.** Provide a runtime API to return the current version number of the software. | TODO | Not yet implemented |
+|**M8.** Provide a runtime API to return the current version number of the software. | TODO | Will add API that uses exported git tags to save version. |
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| Fortran modules with `for` + Trilinos package name. |
 |**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| Public github repository. |
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| None. |
