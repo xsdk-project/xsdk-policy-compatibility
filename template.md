@@ -16,7 +16,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| Short-expanation-here; optional link for more extensive details if needed, see below. [M1 details](#m1-details)|
+|**M1.** Support portable installation through Spack. |Full| Short-expanation-here; optional link for more extensive details if needed, see below. [M1 details](#m1-details)|
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| Short-expanation-here; optional link for more extensive details if needed, see below. [M2 details](#m2-details)|
 |**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full| None. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| None. |
@@ -31,7 +31,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| None. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Packages supports both 32 and 64 bit under same API. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| None. |
-|**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| None. |
+|**M16.** Any xSDK-compatible package that compiles code should have a configuration option to build in Debug mode. |Full| None. |
 
 M1 details <a id="m1-details"></a>: optional: provide more details about approach to addressing topic M1.
 
@@ -48,3 +48,4 @@ M2 details <a id="m2-details"></a>: optional: provide more details about approac
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |None| None. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |None| None. |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |None| None. |
+|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |None| None. |
