@@ -19,7 +19,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| SLATE uses CMake for xSDK. |
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| `make check` does sanity checks of  major routines, all precisions; `test/run_tests.py` does comprehensive testing. |
 |**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full| Matrix takes MPI communicator. |
-|**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Partial| Supports GNU. Requires C++17. Less tested with other compilers. Has issues with Intel icpc and IBM xlc++. Supports vendor LAPACK libraries (OpenBLAS, MKL, ESSL, etc.) |
+|**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| Fully supports GNU g++. Less tested with other compilers. Requires C++17. IBM xlc++ doesn't support C++17. Has issues with Intel icpc; work in progress. Supports vendor LAPACK libraries (OpenBLAS, MKL, ESSL, etc.). |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| Via Bitbucket ([https://bitbucket.org/icl/slate/issues?status=new&status=open](https://bitbucket.org/icl/slate/issues?status=new&status=open)) or SLATE forum ([https://groups.google.com/a/icl.utk.edu/forum/#!forum/slate-user](https://groups.google.com/a/icl.utk.edu/forum/#!forum/slate-user)), both listed in README. |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| None. |
 |**M7.** Come with an open source (BSD style) license. |Full| Uses 3-clause BSD license. |
@@ -31,7 +31,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| Supports standard CMake prefix. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Supports 64-bit pointers. 32-bit is untested, but likely works. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| All xSDK changes are integrated into source. |
-|**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |None| ** In progress ** |
+|**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| None. |
 
 M1 details <a id="m1-details"></a>: optional: provide more details about approach to addressing topic M1.
 
@@ -47,4 +47,4 @@ M2 details <a id="m2-details"></a>: optional: provide more details about approac
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| Workspaces are freed in function that allocated them. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| Exports dependencies via CMake. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Full| Via Spack. |
-|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| Has README.md, LICENSE. |
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| Has README.md, LICENSE, CHANGELOG.md. |
