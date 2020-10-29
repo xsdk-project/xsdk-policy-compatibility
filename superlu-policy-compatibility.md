@@ -7,7 +7,7 @@ Please, provide information on your compability status for each mandatory policy
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
 For current xSDK member packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy.This information will be helpful for future xSDK member packages.
 
-**Website:**  http://crd-legacy.lbl.gov/~xiaoye/SuperLU/
+**Website:**  https://portal.nersc.gov/project/sparse/superlu/
 
 ### Mandatory Policies
 
