@@ -31,7 +31,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| Supports standard CMake prefix. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Supports 64-bit pointers. 32-bit is untested, but likely works. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| All xSDK changes are integrated into source. |
-|**M16.** Any xSDK-compatible package that compiles code should have a configuration option to build in Debug mode. |Full| Via CMAKE_BUILD_TYPE. |
+|**M16.** Any xSDK-compatible package that compiles code should have a configuration option to build in Debug mode. |Full| Via Spack build_type variant and CMAKE_BUILD_TYPE. |
 
 M1 details <a id="m1-details"></a>: optional: provide more details about approach to addressing topic M1.
 
