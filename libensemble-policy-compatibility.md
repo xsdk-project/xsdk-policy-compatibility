@@ -3,8 +3,6 @@
 This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
-*** A good example of how to complete this form can be found in the [PETSc version](https://github.com/xsdk-project/xsdk-policy-compatibility/blob/master/petsc-policy-compatibility.md).
-
 Please, provide information on your compatibility status for each mandatory policy, and if possible also for recommended policies.
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
 
