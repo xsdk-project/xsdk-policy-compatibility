@@ -13,7 +13,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| SUNDIALS uses CMake, supports all xSDK CMake variables, provides 'make test' and 'make test_install' targets.|
+|**M1.** Support portable installation through Spack. |Full| SUNDIALS can be installed with `spack install sundials`. |
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| The SUNDIALS utilizes CTest to run a set of regression tests using the 'make test' command after building. |
 |**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full| SUNDIALS MPI vector constructors take an MPI communicator as input. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| SUNDIALS is tested with GNU compilers on Linux and and LLNL clusters. |
@@ -28,7 +28,11 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| SUNDIALS CMake uses the usual CMAKE_INSTALL_PREFIX variable. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| None. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| All xSDK related changes will be merged into the SUNDIALS master branch for release. |
-|**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| SUNDIALS can be configured and installed with Spack. |
+|**M16.** Any xSDK-compatible package that compiles code should have a configuration option to build in Debug mode. |Full| SUNDIALS can be installed in debug mode via spack with the `build_type=Debug` variant. |
+
+**M1 details**: 
+
+All SUNDIALS features are configurable through spack variants, including CUDA and HIP/ROCm support. For example, for CUDA-enabled SUNDIALS one can do `spack install sundials+cuda`, or for HIP/ROCm, `spack install sundials+rocm`.
 
 ### Recommended Policies
 
@@ -38,7 +42,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |No| We plan to update the test suite to allow for automatically running tests under valgrind. |
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| SUNDIALS functions return positive/negative error codes to report recoverable/unrecoverable failures. User callable functions are provided to get the last returned flag value and name. Error codes are documented in the SUNDIALS user guides.|
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| The SUNDIALS user guides document the necessary function calls to free any allocated memory by SUNDIALS solvers. |
-|**R5.** Provide a mechanism to export ordered list of library dependencies. |No| None. |
+|**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| SUNDIALS exports a CMake config file which details library dependencies. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Partial| The SUNDIALS user guides document versions of dependencies it works with. |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| SUNDIALS has a README and LICENSE file. |
-
+|**R8.** Each xSDK member package should have sufficient documentation to support use and further development. |Full| SUNDIALS has extensive user documentation with examples. Developer documentation is internal only.|
