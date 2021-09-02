@@ -13,7 +13,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| Tasmanian uses the CMake options. |
+|**M1.** Support portable installation through Spack. |Full| Tasmanian uses Spack and all CMake options are exposed. |
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| Tasmanian has a comprehensive test suites covering all major functionality, code coverage is checked daily. |
 |**M3.** Employ user provided MPI communicator (no MPI_COMM_WORLD). |Full| Overall, Tasmanian provides little MPI functionaily, but all of it is restricted to a user specified `MPI_COMM` |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| Tasmanian CI includes both gcc and clang, all releases are tested on the aforementioned DoE machines. In addition, Mac OSX and MS Windows are fully supported as well. |
@@ -28,7 +28,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| Libraries and headers go in `<prefix>/lib` and `<prefix>/include`, CLI tools sit in `<prefix>/bin`, scripts and auxilary files go in `<prefix>/share/Tasmanian`. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| CI and nighly builds are done in 64-bit mode, 32-bit might work but is not tested or supported. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| XSDK optins are integrated in the build system and will be supported in the foreseeable futire. |
-|**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| The Spack package for Tasmanian accepts `+xsdkflags`, and is already included in the xSDK `package.py`. |
+|**M16.** Have a debug build option. |Full| The Spack package for Tasmanian accepts `build_type=debug`. |
 
 ### Recommended Policies
 
@@ -41,3 +41,4 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| The spack package provides a full list of dependencies, the manual lists all tested compilers and libraries. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form. |*Partial*| The detailed installation instructions come with a full list of tested external dependencies (available on github and doxygen, but not machine readable). |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory. |Full| All files are included in the repository. |
+|**R8.** Provide sufficient documentation to support use and further development. |*Partial*| Tasmanian has fully documented internal API, but could use more high level developer notes and guidelines. |
