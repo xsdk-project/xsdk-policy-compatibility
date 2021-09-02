@@ -1,4 +1,4 @@
-# xSDK Community Policy Compatibility for \<package\>
+# xSDK Community Policy Compatibility for SLATE
 
 This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
@@ -10,7 +10,7 @@ If you are not compatible, state what is lacking and what are your plans on how 
 
 For current xSDK member packages: If you were not fully compatible at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
 
-**Website:** \<package website\>
+**Website:** [http://icl.utk.edu/slate/](http://icl.utk.edu/slate/)
 
 ### Mandatory Policies
 
@@ -48,3 +48,4 @@ M2 details <a id="m2-details"></a>: optional: provide more details about approac
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| Exports dependencies via CMake. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Full| Via Spack. |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| Has README.md, LICENSE, CHANGELOG.md. |
+|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| [User Guide](https://www.icl.utk.edu/publications/swan-010), [Dev Guide](https://www.icl.utk.edu/publications/swan-011), [Online docs](https://bitbucket.org/icl/slate/src/master/README.md#markdown-header-documentation). |
