@@ -19,7 +19,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| *hypre* provides a script (make checkpar) that runs a subset of the daily regression tests to satisfy this requirement. |
 |**M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD). |Full| None. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| Being written entirely in C, *hypre* has generally been very portable, and will continue to be due to strong customer demand. In addition, daily/weekly regression tests are performed on various architectures with different compilers.|
-|**M5.** Provide a documented, reliable way to contact the development team. |Full| The *hypre* team can be contacted via email: hypre-support@llnl.gov . Issues can also be reported at https://github.com/LLNL/hypre . |
+|**M5.** Provide a documented, reliable way to contact the development team. |Full| The *hypre* team can be contacted via email: hypre-support@llnl.gov . Issues can also be reported at https://github.com/hypre-space/hypre . |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| None. |
 |**M7.** Come with an open source (BSD style) license. |Full| *hypre* is one of the original xSDK packages and uses the LGPL License v. 2.1. |
 |**M8.** Provide a runtime API to return the current version number of the software. |Full| *hypre* provides a script and a macro that returns the version number. |
