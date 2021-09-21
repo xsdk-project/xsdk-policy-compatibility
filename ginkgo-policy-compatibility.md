@@ -14,47 +14,33 @@ For current xSDK member packages: If you were not fully compatible at some point
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| Ginkgo uses CMake.|
-|**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| Ginkgo contains a comprehensive set of unit tests which can be run individually, or all at once via CTest.|
-|**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full| Ginkgo is an on-node library, so it does not utilize MPI. |
-|**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| Ginkgo supports any C++11 compliant compiler. Compatibility with the newest versions of GNU and Clang compilers is automatically verified via CI. |
+|**M1.** Support portable installation through Spack. |Full| *Ginkgo* supports and provides a Spack package. |
+|**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| Ginkgo contains a comprehensive set of unit tests which can be run individually, or all at once via CTest. In addition, `make test_install` can be ran and is used in `spack` to ensure the correctness of the installation.|
+|**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). |Full| None. |
+|**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| Ginkgo supports any C++14 compliant compiler. Compatibility with the newest versions of GNU, Clang and vendor compilers is automatically verified via CI. |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| The developers can be contacted via [github issues](https://github.com/ginkgo-project/ginkgo/issues) or through the ginkgo.library@gmail.com address. |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| None. |
-|**M7.** Come with an open source (BSD style) license. |Full|  Ginkgo uses 3-clause BSD license. |
+|**M7.** Come with an open source (BSD style) license. |Full|  Ginkgo uses the 3-clause BSD license. |
 |**M8.** Provide a runtime API to return the current version number of the software. |Full| Ginkgo provides the `gko::version_info` class which can be used to query version details. |
-|**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| All ginkgo functions and classes are in the `gko::` namespace. All macros have a `GKO_` prefix. All header files are installed in the `ginkgo/` subidrectory. All shared libraries have a `ginkgo` prefix.|
-|**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| github.com/ginkgo-project/ginkgo](https://github.com/ginkgo-project/ginkgo). |
+|**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| All ginkgo functions and classes are in the `gko::` namespace. All macros have a `GKO_` prefix. All header files are installed in the `ginkgo/` subidrectory. All libraries have a `ginkgo` prefix.|
+|**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| [ginkgo-project/ginkgo](https://github.com/ginkgo-project/ginkgo). |
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| Everything is handled through exceptions or the user controlled `gko::Log` class. A few direct IO statements are used in case of important failure and can be disabled at compile time. |
-|**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| Done through CMake's `find_package`. By default, Ginkgo uses its own version of the subpackages but this behavior can be overridden by using the CMake option `-DGINKGO_USE_EXTERNAL_<PACKAGE\>=ON` or with `-DTPL_ENABLE_<PACKAGE\>=ON`. See [M1 details](#m1-details) for more information. |
+|**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| Done through CMake's `find_package`. By default, Ginkgo uses its own version of the subpackages but this behavior can be overridden with a CMake option. |
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| We use the standard `CMAKE_INSTALL_PREFIX` option. |
-|**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Packages supports both 32 and 64 bit under same API. |
+|**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Ginkgo supports both 32 and 64 bit under the same API. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| Ginkgo aims to be fully xSDK compatible with its first 1.0.0 release. |
-|**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| Ginkgo has a spack package available. |
+|**M16.** Any xSDK-compatible package that compiles code should have a configuration option to build in Debug mode. |Full| Ginkgo activates its debug features through the standard `-DCMAKE_BUILD_TYPE=Debug` option. |
 
-
-M1 details <a id="m1-details"></a>: Ginkgo supports all relevant CMake flags.
-Particularly, the `TPL_ENABLE_<PACKAGE\>`, `TPL_<PACKAGE\>_LIBRARIES` and
-`TPL_<PACKAGE\>_INCLUDE_DIRS` flags are supported.
-When building ginkgo benchmarks, tests, examples or documentation Ginkgo relies
-on some external tools (such as gtest and gflags). Instead of automatically
-installing these tools, the user can use a local version either by using
-Ginkgo's CMake flags or the TPL specific flags. These packages are required only
-when building Ginkgo, but not during the installation step which only installs
-Ginkgo's core libraries.
-
-
-M2 details <a id="m2-details"></a>: There is an extensive unit test suite
-available at build time completed with a smoke test which can be ran by calling
-`make test_install`.
 
 ### Recommended Policies
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**R1.** Have a public repository. |Full| [github.com/ginkgo-project/ginkgo](https://github.com/ginkgo-project/ginkgo) |
-|**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| Ginkgo uses CTest which has this feature. A suppressions list is also provided for convenience. |
+|**R1.** Have a public repository. |Full| [ginkgo-project/ginkgo](https://github.com/ginkgo-project/ginkgo) |
+|**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| Ginkgo uses CTest which has this feature. A suppressions list is also provided for convenience. We also facilitate running our software and tests using memory sanitizers, cuda-memcheck, etc. |
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| Ginkgo reports errors through exceptions inherited from `std::exception`. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| This information is available through a pkg-config file and the CMake exported targets. |
-|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |None|None. | 
+|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Partial|This is documented in our main `README.md`, but currently not in a machine readable form. | 
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Full | Ginkgo provides `README.md`, `LICENSE` and `CHANGELOG.md` files. Support information is available as part of the `README.md`. |
+|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| Full documentation can be found both in user and developer mode. A series of tutorial and many examples are available for using Ginkgo. We have specific guidelines and tutorials for future developers as well (for example, regarding important C++ aspects). |
