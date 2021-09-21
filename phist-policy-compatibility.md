@@ -14,7 +14,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| phist uses CMake and implements the XSDK flags. [M1 details](#m1-details)|
+|**M1.** Support portable installation through Spack. |Full| phist uses CMake and implements the XSDK flags. [M1 details](#m1-details)|
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| There is an extensive suite of unit and integration tests. [M2 details](#m2-details)|
 |**M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD). |Full| See phist_set_default_comm function i phist_tools.h |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| We have nightly builds with different compilers, LAPACK and MPI versions. |
@@ -29,9 +29,9 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| None. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Supports only 64-bit pointers. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| None. |
-|**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| Phist can be installed via spack. |
+|**M16.** Any xSDK-compatible package that compiles code should have a configuration option to build in Debug mode. |Full| None. |
 
-M1 details <a id="m1-details"></a>: PHIST conforms to the CMake behavior specified in the policy. PHIST accepts the TPL\_\* flags, but will produce an error message in some combinations: for packages that provde a \<pkg\>-config.cmake or \<pkg\>.pc file, we only accept TPL\_\<pkg\>\_DIR and report an error if TPL\_\<pkg\>\_LIBRARIES and/or TPL\_\<pkg\>\_INCLUDE\_DIRS are given. Rationale: it would be excessively complex to check for all packages wether the values given work in a comprehensive way.
+M1 details <a id="m1-details"></a>: PHIST provides the variants suggested by xSDK.
 
 M2 details <a id="m2-details"></a>: There is an extensive suite of unit and integration tests, which can be run using 'make test' after building the libraries (using 'make'). A `smoke test' after installation can be performed using 'make test_install'. The extensive test suite is an essential feature of phist because it also tests the underlying kernel library for correctness, trying e.g. to detect hard-to-find errors due to lack of data alignment.
 
@@ -46,4 +46,5 @@ M2 details <a id="m2-details"></a>: There is an extensive suite of unit and inte
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| installs phistLibraries.cmake and a pkg-config file phist.pc, and provides an API call (cf. phist_tools.h)|
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.	|Partial| Only available in CMake files and via spack. |
-|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory. | SUPPORT file is missing (information available in README.md) |
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory. | Partial |SUPPORT file is missing (information available in README.md) |
+|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| None. |
