@@ -6,7 +6,7 @@
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support portable installation through Spack. |Full| `ArborX` is a `spack` package: https://github.com/spack/spack/blob/develop/var/spack/repos/builtin/packages/arborx/package.py| 
+|**M1.** Support portable installation through Spack. |Full| `ArborX` is a `spack` package: https://github.com/spack/spack/blob/develop/var/spack/repos/builtin/packages/arborx/package.py|
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| `ArborX` uses `CTest` for running comprehensive tests. |
 |**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full| Only user-provided communicators are used. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| `ArborX` requires C++14 and supports all upcoming backends (`CUDA`, `HIP`, `OpenMPTarget`, and `SYCL`)  |
@@ -33,5 +33,5 @@
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full | `ArborX` requires `Kokkos` which needs to be initialized and finalized at before using `ArborX` resp. after using `ArborX` |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| Via `CMake`. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  | Full | Via `CMake`. |
-|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| https://github.com/arborx/ArborX/blob/master/README.md, https://github.com/arborx/ArborX/blob/master/LICENSE. |
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| https://github.com/arborx/ArborX/blob/master/README.md, https://github.com/arborx/ArborX/blob/master/LICENSE, https://github.com/arborx/ArborX/blob/master/CHANGELOG.md. |
 |**R8.** Each xSDK member package should have sufficient documentation to support use and further development. |Full| https://github.com/arborx/ArborX/wiki |
