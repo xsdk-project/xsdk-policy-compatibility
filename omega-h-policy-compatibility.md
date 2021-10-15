@@ -1,22 +1,18 @@
 # xSDK Community Policy Compatibility for Omega_h
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://docs.google.com/document/d/1DCx2Duijb0COESCuxwEEK1j0BPe2cTIJ-AjtJxt3290/edit#heading=h.2hp5zbf0n3o3)
+This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
-Please, provide information on your compability status for each mandatory policy, and if possible also for recommended policies.
-If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
-For current xSDK member packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
-
-**Website:** https://github.com/ibaned/omega_h
+**Website:** https://github.com/sandialabs/omega_h
 
 ### Mandatory Policies
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| Omega\_h obeys all xSDK Community Installation Policies|
+|**M1.** Support portable installation through Spack. |Full| Omega\_h follows all xSDK Community Installation Policies|
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| Omega_h supports `make test_install`. |
-|**M3.** Employ userprovided MPI communicator (no `MPI_COMM_WORLD`). |Full| `Omega_h::Library` takes an `MPI_Comm` argument, nothing uses `MPI_COMM_WORLD`. |
-|**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| Omega_h supports GNU, Clang, NVCC, Intel, and other compilers, and optionally uses MPI, OpenMP, and/or CUDA for parallelism through Kokkos. |
+|**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Partial| `Omega_h::Library` takes an `MPI_Comm` argument, nothing uses `MPI_COMM_WORLD`. A PR was created to address [MPI 3 version checking](https://github.com/sandialabs/omega_h/pull/374). |
+|**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| Omega_h supports GNU, Clang, NVCC, Intel, and other compilers, and optionally uses MPI, OpenMP, and/or CUDA for parallelism through Kokkos.|
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| GitHub provides the mechanism for contacting the developer. |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| We do. |
 |**M7.** Come with an open source (BSD style) license. |Full| Omega_h is released under the 2-clause BSD license. |
@@ -28,7 +24,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| We do. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Omega_h builds with 64-bit pointers. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| They are. |
-|**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| Omega_h is included in mainline Spack
+|**M16.** Any xSDK-compatible package that compiles code should have a configuration option to build in Debug mode. |Full| None. |
 
 ### Recommended Policies
 
@@ -41,3 +37,4 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| Omega_h's build system exports such text files. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  | Partial | For packages in Spack, this is documented in the Spack package file. |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  | Partial | We have README and LICENSE. |
+|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Partial| There are usage examples but no developer docs. |
