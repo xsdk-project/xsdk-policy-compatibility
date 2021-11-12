@@ -13,13 +13,13 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| Trillinos uses the CMake options. |
+|**M1.** M1. Support portable installation through Spack.|Full| Trillinos supports and provides a Spack package. |
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| Trilinos has over 1000 test examples and a test harness that can be built and executed through CTest. It also collects information on the failures and can display them. |
 |**M3.** Employ user provided MPI communicator (no MPI_COMM_WORLD). |Full| All Trilinos class objects take a MPI communicator in the constructor, allowing the user complete control over where each object exists and performs its computations. |
-|**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| To enable the full capability, Trilinos requires compilers with C++11 support; e.g. GNU 4.8.4 or later. There is an option to disable all C++11 modules. |
+|**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| To enable the full capability, Trilinos requires compilers with C++14 support; e.g. GNU 6.1.0 (default setting) or later. There is an option to disable all C++14 modules. |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| Trilinos developers developers can be contacted either via email (trilinos-help@software.sandia.gov) or Trilinos-Users ML https://trilinos.org/mailman/listinfo/trilinos-users. |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| Teucho's debug option uses its specific MPI error handler. Otherwise, all the packages respect the system resources.  |
-|**M7.** Come with an open source (BSD style) license. |Full| Either LGPL or BSD, depending on packages. See https://trilinos.org/download/license/ for the detail. |
+|**M7.** Come with an open source (BSD style) license. |Full| Either LGPL or BSD, depending on packages. See https://trilinos.github.io/license.html for the detail. |
 |**M8.** Provide a runtime API to return the current version number of the software. |Full| Teuchos_Version() call returns the version number in string type. |
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| |
 |**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| https://github.com/trilinos/trilinos |
@@ -28,7 +28,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full|  |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Packages supports both 32 and 64 bit under same API. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| Rather than providing the xSDK options as add ons, we have incorporated them fully into the basic Trilinos infrastructure, so that xSDK options get the same maintenance and support as any other feature of Trilinos.  |
-|**M16.** The package must support production-quality installation compatible with the xSDK install tool and xSDK metapackage. |Full| Trilinos Cmake has full support from Spack. |
+|**M16.** Any xSDK-compatible package that compiles code should have a configuration option to build in Debug mode. |Full| Trilinos Cmake has full support from Spack. |
 
 ### Recommended Policies
 
@@ -39,3 +39,6 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Full|  |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full|  A Valgrind build on the Dashboard is executed regularly. Parts of Trilinos get tested in Valgrind in downstream applications too. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| TriBITS takes care of this both with CMake's FIND_PACKAGE and for Makefule users. |
+|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |None| None. |
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Full| None. |
+|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Partial| There is full documentation for usage as well as example codes, there is an old developer manual, which needs to be updated or completely replaced. |
