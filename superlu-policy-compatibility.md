@@ -14,7 +14,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
 |**M1.** Support xSDK community GNU Autoconf or CMake options. |Full| SuperLU uses CMake. |
-|**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| SuperLU ahs over 800 test examples and a test harness that can execute the examples in parallel. It also collects information on the failures and can display them graphically (http://my.cdash.org/index.php?project=SuperLU_DIST). |
+|**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| SuperLU has over 800 test examples and a test harness that can execute the examples in parallel. It also collects information on the failures and can display them graphically (http://my.cdash.org/index.php?project=SuperLU_DIST). |
 |**M3.** Employ userprovided MPI communicator (no MPI_COMM_WORLD). |Full| Each SuperLU solver instance takes a MPI communicator, allowing the user complete control over on which processes the linear system is defined and solved in the parallel computations. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| SuperLU test suites are run on a number of different platforms.|
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| SuperLU developers can be contacted via issues on github (https://github.com/xiaoyeli/superlu_dist/issues/) or via email to xsli@lbl.gov.|
