@@ -7,7 +7,7 @@ Please, provide information on your compatibility status for each mandatory poli
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
 For current xSDK member packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
 
-**Website:**  https://computation.llnl.gov/projects/sundials
+**Website:**  https://computing.llnl.gov/projects/sundials
 
 ### Mandatory Policies
 
@@ -44,5 +44,5 @@ All SUNDIALS features are configurable through spack variants, including CUDA an
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| The SUNDIALS user guides document the necessary function calls to free any allocated memory by SUNDIALS solvers. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| SUNDIALS exports a CMake config file which details library dependencies. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Partial| The SUNDIALS user guides document versions of dependencies it works with. |
-|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| SUNDIALS has a README and LICENSE file. |
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| SUNDIALS has a README, CHANGELONG and LICENSE file. |
 |**R8.** Each xSDK member package should have sufficient documentation to support use and further development. |Full| SUNDIALS has extensive user documentation with examples. Developer documentation is internal only.|
