@@ -38,7 +38,7 @@ All SUNDIALS features are configurable through spack variants, including CUDA an
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**R1.** Have a public repository. |No| The SUNDIALS development repository is not publicly available but current releases are mirrored on GitHub. |
+|**R1.** Have a public repository. |Full| https://github.com/LLNL/sundials |
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |No| We plan to update the test suite to allow for automatically running tests under valgrind. |
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| SUNDIALS functions return positive/negative error codes to report recoverable/unrecoverable failures. User callable functions are provided to get the last returned flag value and name. Error codes are documented in the SUNDIALS user guides.|
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| The SUNDIALS user guides document the necessary function calls to free any allocated memory by SUNDIALS solvers. |
