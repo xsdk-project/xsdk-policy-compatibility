@@ -18,14 +18,14 @@ For current xSDK member packages: If you were not fully compatible at some point
 |------------------------|-------|-------------------------|
 |**M1.** Support portable installation through Spack. |Full| Uses Spack with CMake for xSDK. |
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| `make check` does sanity checks of all routines, all precisions; `test/run_tests.py` does comprehensive testing. |
-|**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full| None. |
+|**M3.** Employ user-provided MPI communicator (no `MPI_COMM_WORLD`). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full| None. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| Supports major compilers (GNU, Clang, Intel, IBM, etc.) and vendor BLAS libraries (OpenBLAS, MKL, ESSL, etc.) |
-|**M5.** Provide a documented, reliable way to contact the development team. |Full| Via Bitbucket ([https://bitbucket.org/icl/blaspp/issues?status=new&status=open](https://bitbucket.org/icl/blaspp/issues?status=new&status=open)) or SLATE forum ([https://groups.google.com/a/icl.utk.edu/forum/#!forum/slate-user](https://groups.google.com/a/icl.utk.edu/forum/#!forum/slate-user)), both listed in README. |
+|**M5.** Provide a documented, reliable way to contact the development team. |Full| Via GitHub ([https://github.com/icl-utk-edu/blaspp/issues](https://github.com/icl-utk-edu/blaspp/issues)) or SLATE forum ([https://groups.google.com/a/icl.utk.edu/forum/#!forum/slate-user](https://groups.google.com/a/icl.utk.edu/forum/#!forum/slate-user)), both listed in README. |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| None. |
 |**M7.** Come with an open source (BSD style) license. |Full| Uses 3-clause BSD license. |
 |**M8.** Provide a runtime API to return the current version number of the software. |Full| `blas::blaspp_version()` and `blas::blaspp_id()`. Also `BLASPP_VERSION` compile time macro. |
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| Uses `blas` C++ namespace. Macros have `blas_`, `BLAS_`, or `BLASPP_` prefix. Headers are `blas.hh` and in `blas/` folder. |
-|**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| [https://bitbucket.org/icl/blaspp](https://bitbucket.org/icl/blaspp) |
+|**M10.** Provide an xSDK team accessible repository (not necessarily publicly available). |Full| [https://github.com/icl-utk-edu/blaspp](https://github.com/icl-utk-edu/blaspp) |
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| Does not print. |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| Links with any standard BLAS library. |
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| Supports standard CMake prefix. |
@@ -41,11 +41,11 @@ M2 details <a id="m2-details"></a>: optional: provide more details about approac
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**R1.** Have a public repository. |Full| [https://bitbucket.org/icl/blaspp](https://bitbucket.org/icl/blaspp) |
+|**R1.** Have a public repository. |Full| [https://github.com/icl-utk-edu/blaspp](https://github.com/icl-utk-edu/blaspp) |
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |None| Not tested. |
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Full| Throws C++ exceptions by default (can be disabled). |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| Workspaces are freed in function that allocated them. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| Exports dependencies via CMake. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Full| Via Spack. |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| Has README.md, LICENSE, CHANGELOG.md. |
-|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| [Online docs](https://bitbucket.org/icl/blaspp/src/master/README.md#markdown-header-documentation). |
+|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| [Online docs](https://github.com/icl-utk-edu/blaspp#documentation). |
