@@ -32,7 +32,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full/Partial/None| Package supports both 32 and 64 bit under same API. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full/Partial/None| None. |
 |**M16.** Have a debug build option. |Full/Partial/None| None. |
-|**M17.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full/Partial/None| None. |
+|**M17.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full/Partial/None| While documentation for users is mandatory, developer documentation is recommended, but not yet required. |
 
 M1 details <a id="m1-details"></a>: optional: provide more details about approach to addressing topic M1.
 
