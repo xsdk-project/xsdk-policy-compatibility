@@ -31,7 +31,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| None. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| Every effort is made for *hypre* to be backwards compatible. |
 |**M16.** Have a debug build option. |Full| *hypre* provides such an option with --enable-debug. |
-|**M17.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| There is full documentation for usage as well as example codes, as well as instructions for developers, see https://github.com/hypre-space/hypre/wiki. |
+|**M17.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| There is full documentation for usage, example codes, as well as instructions for developers, see https://github.com/hypre-space/hypre/wiki. |
 
 ### Recommended Policies
 
