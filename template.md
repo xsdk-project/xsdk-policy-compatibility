@@ -1,6 +1,6 @@
 # xSDK Community Policy Compatibility for \<package\>
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
+This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies version 1.0.0. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
 *** A good example of how to complete this form can be found in the [hypre version](https://github.com/xsdk-project/xsdk-policy-compatibility/blob/master/hypre-policy-compatibility.md).
