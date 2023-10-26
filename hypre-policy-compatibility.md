@@ -21,7 +21,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| Being written entirely in C, *hypre* has generally been very portable, and will continue to be due to strong customer demand. In addition, daily/weekly regression tests are performed on various architectures with different compilers.|
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| The *hypre* team can be contacted via email: hypre-support@llnl.gov . Issues can also be reported at https://github.com/hypre-space/hypre . |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| None. |
-|**M7.** Come with an open source (BSD style) license. |Full| *hypre* is one of the original xSDK packages and uses the LGPL License v. 2.1. |
+|**M7.** Come with an open source (BSD style) license. |Full| *hypre* is licensed under the MIT and the Apache 2.0 license. |
 |**M8.** Provide a runtime API to return the current version number of the software. |Full| *hypre* provides a script and a macro that returns the version number. |
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| *hypre* prepends macros, library and include file names with HYPRE_ or hypre_ to avoid namespace collisions with other packages. |
 |**M10.** Provide a publicly available repository. |Full| *hypre*'s repository is publically available at https://github.com/hypre-space/hypre. |
@@ -43,5 +43,5 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| All resources are freed as soon as they are no longer needed as long as the required functions are used to free them, as described in the users and reference manuals. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |None| None. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |None| None. |
-|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Full| None. |
+|**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Full| *hypre* provides the files README, SUPPORT, CHANGELOG, LICENSE_MIT and LICENSE_APACHE in the top directory. |
 |**R8.** Provide version comparison preprocessor macros. |Full| *hypre* provides the version as HYPRE_NUMBER in digital format to allow version comparisons. |
