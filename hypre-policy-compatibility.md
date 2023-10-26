@@ -44,4 +44,4 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |None| None. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |None| None. |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Full| None. |
-|**R8.** Provide version comparison preprocessor macros. |Full| None. |
+|**R8.** Provide version comparison preprocessor macros. |Full| *hypre* provides the version as HYPRE_NUMBER in digital format to allow version comparisons. |
