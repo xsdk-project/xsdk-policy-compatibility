@@ -21,14 +21,14 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full/Partial/None| None. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| None. |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full/Partial/None| None. |
-|**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full/Partial/None| None. |
+|**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| None. |
 |**M7.** Come with an open source (BSD style) license. |Full| Using BSD 3-Clause License. |
 |**M8.** Provide a runtime API to return the current version number of the software. |Full/Partial/None| None. |
-|**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full/Partial/None| None. |
+|**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| None. |
 |**M10.** Provide a publicly available repository. |Full| None. |
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full/Partial/None| None. |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| None. |
-|**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full/Partial/None| None. |
+|**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| None. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Package supports both 32 and 64 bit under same API. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| None. |
 |**M16.** Have a debug build option. |Full| None. |
