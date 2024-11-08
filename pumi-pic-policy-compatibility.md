@@ -28,7 +28,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M10.** Provide a publicly available repository. |Full| Pumi-Pic is hosted in a public repository at: https://github.com/SCOREC/pumi-pic |
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full/Partial/None| None. |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| None. |
-|**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| None. |
+|**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| This can be done with the standard configuration variable in CMake. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Package supports both 32 and 64 bit under same API. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| None. |
 |**M16.** Have a debug build option. |Full| None. |
