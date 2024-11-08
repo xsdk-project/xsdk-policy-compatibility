@@ -25,7 +25,8 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M7.** Come with an open source (BSD style) license. |Full| Using BSD 3-Clause License. |
 |**M8.** Provide a runtime API to return the current version number of the software. |Full/Partial/None| None. |
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| None. |
-|**M10.** Provide a publicly available repository. |Full| None. |
+|**M10.** Provide a publicly available repository. |Full| Pumi-Pic is hosted in a public repository at: https://github.com/SCOREC/pumi-pic
+ |
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full/Partial/None| None. |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| None. |
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| None. |
