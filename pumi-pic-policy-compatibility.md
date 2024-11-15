@@ -18,15 +18,15 @@ For current xSDK member packages: If you were not fully compatible at some point
 |------------------------|-------|-------------------------|
 |**M1.** Support portable installation through Spack. |Full/Partial/None| Short-expanation-here; optional link for more extensive details if needed, see below. [M1 details](#m1-details)|
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| Supports ctest
-|**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full/Partial/None| None. |
+|**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full| None. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| None. |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| Developers can be contacted through github repository or as specified in the SUPPORT.md file. |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| None. |
 |**M7.** Come with an open source (BSD style) license. |Full| Using BSD 3-Clause License. |
-|**M8.** Provide a runtime API to return the current version number of the software. |Full/Partial/None| None. |
+|**M8.** Provide a runtime API to return the current version number of the software. |Full| None. |
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| None. |
 |**M10.** Provide a publicly available repository. |Full| Pumi-Pic is hosted in a public repository at: https://github.com/SCOREC/pumi-pic |
-|**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full/Partial/None| None. |
+|**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| IO statements can be disabled with a compiler flag 'PP_PRINT_ENABLED' or at runtime using optional spdlog |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| None. |
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| This can be done with the standard configuration variable in CMake. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Package supports both 32 and 64 bit under same API. |
@@ -44,7 +44,7 @@ M1 details <a id="m1-details"></a>: optional: provide more details about approac
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| None. |
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Full/Partial/None| None. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
-|**R5.** Provide a mechanism to export ordered list of library dependencies. |Full/Partial/None| None. |
-|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Full/Partial/None| None. |
+|**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| Done through CMake |
+|**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Full| Done through CMake |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| No CHANGELOG. |
-|**R8.** Provide version comparison preprocessor macros.  |Full/Partial/None| None. |
+|**R8.** Provide version comparison preprocessor macros.  |Full| None. |
