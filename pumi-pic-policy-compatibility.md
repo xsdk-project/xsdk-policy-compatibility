@@ -29,7 +29,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| IO statements can be disabled with a compiler flag 'PP_PRINT_ENABLED' or at runtime using optional spdlog |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| None. |
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| This can be done with the standard configuration variable in CMake. |
-|**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Package supports both 32 and 64 bit under same API. |
+|**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Package supports 64 bit. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| None. |
 |**M16.** Have a debug build option. |Full| None. |
 |**M17.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full/Partial/None| While documentation for users is mandatory, developer documentation is recommended, but not yet required. |
@@ -42,7 +42,7 @@ M1 details <a id="m1-details"></a>: optional: provide more details about approac
 |------------------------|-------|-------------------------|
 |**R1.** At least one validation (smoke) test that can be invoked through the Spack package. |Full/Partial/None| None. |
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| None. |
-|**R3.** Adopt and document consistent system for error conditions/exceptions. |Full/Partial/None| None. |
+|**R3.** Adopt and document consistent system for error conditions/exceptions. |Partial| No hardwired IO statements. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| Done through CMake |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Full| Done through CMake |
