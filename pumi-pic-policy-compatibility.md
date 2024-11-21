@@ -16,7 +16,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**M1.** Support portable installation through Spack. |Full/Partial/None| Short-expanation-here; optional link for more extensive details if needed, see below. [M1 details](#m1-details)|
+|**M1.** Support portable installation through Spack. |Full/Partial/None| Short-expanation-here; optional link for more extensive details if needed, see below. |
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| Supports ctest
 |**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |Full| None. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| None. |
@@ -32,9 +32,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Package supports 64 bit. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| None. |
 |**M16.** Have a debug build option. |Full| None. |
-|**M17.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full/Partial/None| While documentation for users is mandatory, developer documentation is recommended, but not yet required. |
-
-M1 details <a id="m1-details"></a>: optional: provide more details about approach to addressing topic M1.
+|**M17.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| Contains installation instrutions and a programming guide in the github wiki: https://github.com/SCOREC/pumi-pic/wiki. Also maintains doxygen documentaion on github pages: https://scorec.github.io/pumi-pic/ |
 
 ### Recommended Policies
 
