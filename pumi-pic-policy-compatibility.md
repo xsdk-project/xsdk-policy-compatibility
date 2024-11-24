@@ -38,7 +38,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 
 | Policy                 |Support| Notes                   |
 |------------------------|-------|-------------------------|
-|**R1.** At least one validation (smoke) test that can be invoked through the Spack package. |Full/Partial/None| None. |
+|**R1.** At least one validation (smoke) test that can be invoked through the Spack package. |Full| None. |
 |**R2.** Possible to run test suite under valgrind in order to test for memory corruption issues. |Full| None. |
 |**R3.** Adopt and document consistent system for error conditions/exceptions. |Partial| No hardwired IO statements. |
 |**R4.** Free all system resources acquired as soon as they are no longer needed. |Full| None. |
