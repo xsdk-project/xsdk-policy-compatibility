@@ -26,7 +26,7 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**M8.** Provide a runtime API to return the current version number of the software. |Full| Version can be retrieved from pumipic_version() function. |
 |**M9.** Use a limited and well-defined symbol, macro, library, and include file name space. |Full| None. |
 |**M10.** Provide a publicly available repository. |Full| Pumi-Pic is hosted in a public repository at: https://github.com/SCOREC/pumi-pic |
-|**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| IO statements can be disabled with a compiler flag 'PP_PRINT_ENABLED' or at runtime using optional spdlog |
+|**M11.** Have no hardwired print or IO statements that cannot be turned off. |Full| IO statements can be disabled with a compiler flag 'PUMIPIC_PRINT_ENABLED' or at runtime using optional spdlog |
 |**M12.** For external dependencies, allow installing, building, and linking against an outside copy of external software. |Full| None. |
 |**M13.** Install headers and libraries under \<prefix\>/include and \<prefix\>/lib. |Full| This can be done with the standard configuration variable in CMake. |
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| Package supports 64 bit. |
