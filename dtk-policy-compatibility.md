@@ -2,6 +2,8 @@
 
 **Website:** https://github.com/ORNL-CEES/DataTransferKit
 
+**Member:** yes
+
 ### Mandatory Policies
 
 | Policy                                                                                                                                                                                                                    | Support | Notes                                                                                                                                  |
@@ -34,4 +36,4 @@
 | **R5.** Provide a mechanism to export ordered list of library dependencies.                                    | Full    | Via `CMake`.                                                                                                                          |
 | **R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form. | Full    | Via `CMake`.                                                                                                                          |
 | **R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.                                   | Partial | https://github.com/ORNL-CEES/DataTransferKit/blob/master/README.md, https://github.com/ORNL-CEES/DataTransferKit/blob/master/LICENSE. |
-| **R8.** Each xSDK member package should have sufficient documentation to support use and further development.  | Partial | https://datatransferkit.readthedocs.io/en/latest                                                                                      |
+| **R8.** Each xSDK package should have sufficient documentation to support use and further development.  | Partial | https://datatransferkit.readthedocs.io/en/latest                                                                                      |

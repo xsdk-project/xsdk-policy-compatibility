@@ -1,12 +1,16 @@
 # xSDK Community Policy Compatibility for HiOp
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
+This document summarizes the efforts of current and future xSDK packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
 Please, provide information on your compatibility status for each mandatory policy, and if possible also for recommended policies.
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
 
+An xSDK compatible package is considered to be a member package if it uses, or can be used by another package in the xSDK.
+
 **Website:** https://github.com/LLNL/hiop
+
+**Member:** yes
 
 ### Mandatory Policies
 
@@ -44,4 +48,4 @@ M2 details <a id="m2-details"></a>: optional: provide more details about approac
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| Header `hiopVersion.hpp` provides dynamic and static dependency information for key dependencies, particularly those related to GPU execution. HiOp also exports CMake targets. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Full| Spack packages provide this information. Dependencies are also documented in the user manual in PDF form under the `doc` directory. |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.| Full | README.md, SUPPORT.md, COPYRIGHT, LICENSE, and CHANGELOG files exist in top-level directory. |
-|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| The `doc` directory contains a thorough user manual with detailed documentation on the interface. Additionally, the file `README_developers.md` contains guidelines developers must follow to contribute to HiOp and the `src/LinAlg` directory contains markup files documenting various assumptions used by the linear algebra kernels. Further documentation may be found in `README_summit.md` for development on Summit. |
+|**R8.** Each xSDK package should have sufficient documentation to support use and further development.  |Full| The `doc` directory contains a thorough user manual with detailed documentation on the interface. Additionally, the file `README_developers.md` contains guidelines developers must follow to contribute to HiOp and the `src/LinAlg` directory contains markup files documenting various assumptions used by the linear algebra kernels. Further documentation may be found in `README_summit.md` for development on Summit. |

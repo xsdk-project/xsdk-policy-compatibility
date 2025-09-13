@@ -1,13 +1,13 @@
 # xSDK Community Policy Compatibility for *hypre*
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
+This document summarizes the efforts of current and future xSDK packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
 *** A good example of how to complete this form can be found in the [hypre version](https://github.com/xsdk-project/xsdk-policy-compatibility/blob/master/hypre-policy-compatibility.md).
 
 Please, provide information on your compability status for each mandatory policy, and if possible also for recommended policies.
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
-For current xSDK member packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
+For current xSDK packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK packages.
 
 **Web site**: http://www.llnl.gov/casc/hypre
 
@@ -31,7 +31,7 @@ For current xSDK member packages: If you were not compliant at some point, pleas
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| None. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| Every effort is made for *hypre* to be backwards compatible. |
 |**M16.** Have a debug build option. |Full| *hypre* provides such an option with --enable-debug. |
-|**M17.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| There is full documentation for usage, example codes, as well as instructions for developers, see https://github.com/hypre-space/hypre/wiki. |
+|**M17.** Each xSDK package should have sufficient documentation to support use and further development.  |Full| There is full documentation for usage, example codes, as well as instructions for developers, see https://github.com/hypre-space/hypre/wiki. |
 
 ### Recommended Policies
 

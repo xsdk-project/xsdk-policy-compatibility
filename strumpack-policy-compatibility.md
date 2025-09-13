@@ -1,11 +1,15 @@
 # xSDK Community Policy Compatibility for STRUMPACK
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://docs.google.com/document/d/1DCx2Duijb0COESCuxwEEK1j0BPe2cTIJ-AjtJxt3290/edit#heading=h.2hp5zbf0n3o3)
+This document summarizes the efforts of current and future xSDK packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://docs.google.com/document/d/1DCx2Duijb0COESCuxwEEK1j0BPe2cTIJ-AjtJxt3290/edit#heading=h.2hp5zbf0n3o3)
 and should be considered when filling out this form.
 
-Please, provide information on your compatibility status for each mandatory policy, and if possible also for recommended policies. If you are not compatible, state what is lacking and what are your plans on how to achieve compliance. For current xSDK member packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
+Please, provide information on your compatibility status for each mandatory policy, and if possible also for recommended policies. If you are not compatible, state what is lacking and what are your plans on how to achieve compliance. For current xSDK packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK packages.
+
+An xSDK compatible package is considered to be a member package if it uses, or can be used by another package in the xSDK.
 
 **Website:** http://portal.nersc.gov/project/sparse/strumpack/
+
+**Member:** yes
 
 ### Mandatory Policies
 
@@ -45,4 +49,4 @@ All STRUMPACK features are configurable through spack variants, including CUDA a
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| STRUMPACK exports a CMake config file which details library dependencies. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Partial| The STRUMPACK documentation has some information. Version conflicts are also part of the spack installation script. |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| STRUMPACK has a README and LICENSE file. |
-|**R8.** Each xSDK member package should have sufficient documentation to support use and further development. |Full| STRUMPACK has extensive user documentation with examples. |
+|**R8.** Each xSDK package should have sufficient documentation to support use and further development. |Full| STRUMPACK has extensive user documentation with examples. |

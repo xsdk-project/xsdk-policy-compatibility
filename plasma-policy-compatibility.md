@@ -1,7 +1,7 @@
 # xSDK Community Policy Compatibility for PLASMA
 
 In this document, we summarize the continuing efforts of the current and future
-xSDK member packages to achieve compatibility with the xSDK community policies.
+xSDK packages to achieve compatibility with the xSDK community policies.
 What is available below is only a short description of each item of the policy.
 The full description is available as an
 [online document](https://docs.google.com/document/d/1DCx2Duijb0COESCuxwEEK1j0BPe2cTIJ-AjtJxt3290/edit#heading=h.2hp5zbf0n3o3)
@@ -13,11 +13,15 @@ their are applicable or have been implemented.  If the package is not
 compatible, it is stated what is lacking and what are the specific plans on how
 to achieve compliance.
 
-For current xSDK member packages: non-compliance at some point in time should
+For current xSDK packages: non-compliance at some point in time should
 be described and the steps that were undertaken to fulfill the policy. This
-information should be helpful for future xSDK member packages.
+information should be helpful for future xSDK packages.
+
+An xSDK compatible package is considered to be a member package if it uses, or can be used by another package in the xSDK.
 
 **Website:**  [PLASMA website on Bitbucket](https://github.com/icl-utk-edu/plasma)
+
+**Member:** yes
 
 ### Mandatory Policies
 
@@ -51,4 +55,4 @@ information should be helpful for future xSDK member packages.
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| New PLASMA release exports configuration details as a header file that is generated during configuration stage and through CMake's installation process. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Full| PLASMA depends on number of compiler and library features that are documented through CMake and Spack.|
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| PLASMA has `README.md`, `LICENCE`, and `ChangeLog` files in top directory, support contacts are in `README.md` |
-|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| The majority of PLASMA's public and private functions are extensively documented through Doxygen and the development process uses the common Git flow model that is documented on external sites. |
+|**R8.** Each xSDK package should have sufficient documentation to support use and further development.  |Full| The majority of PLASMA's public and private functions are extensively documented through Doxygen and the development process uses the common Git flow model that is documented on external sites. |

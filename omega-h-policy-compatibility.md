@@ -1,9 +1,11 @@
 # xSDK Community Policy Compatibility for Omega_h
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
+This document summarizes the efforts of current and future xSDK packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
 **Website:** https://github.com/sandialabs/omega_h
+
+**Member:** yes
 
 ### Mandatory Policies
 
@@ -37,4 +39,4 @@ and should be considered when filling out this form.
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| Omega_h's build system exports such text files. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  | Partial | For packages in Spack, this is documented in the Spack package file. |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  | Partial | We have README and LICENSE. |
-|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Partial| There are usage examples but no developer docs. |
+|**R8.** Each xSDK package should have sufficient documentation to support use and further development.  |Partial| There are usage examples but no developer docs. |
