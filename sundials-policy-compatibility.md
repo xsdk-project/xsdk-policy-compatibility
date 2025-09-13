@@ -1,13 +1,17 @@
 # xSDK Community Policy Compatibility for SUNDIALS
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
+This document summarizes the efforts of current and future xSDK packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
 Please, provide information on your compatibility status for each mandatory policy, and if possible also for recommended policies.
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
-For current xSDK member packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
+For current xSDK packages: If you were not compliant at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK packages.
+
+An xSDK compatible package is considered to be a member package if it uses, or can be used by another package in the xSDK.
 
 **Website:**  https://computing.llnl.gov/projects/sundials
+
+**Member:** yes
 
 ### Mandatory Policies
 
@@ -45,4 +49,4 @@ All SUNDIALS features are configurable through spack variants, including CUDA an
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| SUNDIALS exports a CMake config file which details library dependencies. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Partial| The SUNDIALS user guides document versions of dependencies it works with. |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Partial| SUNDIALS has a README.md, CHANGELOG.md and LICENSE file. |
-|**R8.** Each xSDK member package should have sufficient documentation to support use and further development. |Full| SUNDIALS has extensive user documentation with examples. Developer documentation is internal only.|
+|**R8.** Each xSDK package should have sufficient documentation to support use and further development. |Full| SUNDIALS has extensive user documentation with examples. Developer documentation is internal only.|

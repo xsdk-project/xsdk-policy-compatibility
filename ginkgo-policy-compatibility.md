@@ -1,14 +1,18 @@
 # xSDK Community Policy Compatibility for Ginkgo
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
+This document summarizes the efforts of current and future xSDK packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
 Please, provide information on your compability status for each mandatory policy, and if possible also for recommended policies.
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
 
-For current xSDK member packages: If you were not fully compatible at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
+For current xSDK packages: If you were not fully compatible at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK packages.
+
+An xSDK compatible package is considered to be a member package if it uses, or can be used by another package in the xSDK.
 
 **Website:** [ginkgo-project.github.io](https://ginkgo-project.github.io/)
+
+**Member:** yes
 
 ### Mandatory Policies
 
@@ -43,4 +47,4 @@ For current xSDK member packages: If you were not fully compatible at some point
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| This information is available through a pkg-config file and the CMake exported targets. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Partial|This is documented in our main `README.md`, but currently not in a machine readable form. | 
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Full | Ginkgo provides `README.md`, `LICENSE` and `CHANGELOG.md` files. Support information is available as part of the `README.md`. |
-|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| Full documentation can be found both in user and developer mode. A series of tutorial and many examples are available for using Ginkgo. We have specific guidelines and tutorials for future developers as well (for example, regarding important C++ aspects). |
+|**R8.** Each xSDK package should have sufficient documentation to support use and further development.  |Full| Full documentation can be found both in user and developer mode. A series of tutorial and many examples are available for using Ginkgo. We have specific guidelines and tutorials for future developers as well (for example, regarding important C++ aspects). |

@@ -1,12 +1,16 @@
 # xSDK Community Policy Compatibility for ExaGO
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
+This document summarizes the efforts of current and future xSDK packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
 Please, provide information on your compability status for each mandatory policy, and if possible also for recommended policies.
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
 
+An xSDK compatible package is considered to be a member package if it uses, or can be used by another package in the xSDK.
+
 **Website:** https://gitlab.pnnl.gov/exasgd/frameworks/exago
+
+**Member:** yes
 
 ### Mandatory Policies
 
@@ -44,4 +48,4 @@ M2 details <a id="m2-details"></a>: optional: provide more details about approac
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| ExaGO exposes two arrays, `ExaGODependencyNames` and `ExaGOIsDependencyEnabled`, allowing users to query dependency information. Only key dependencies are tracked in these arrays, such as RAJA and GPU-related dependencies. |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Full| Our Spack packages document much of this information. Documentation in [`INSTALL.md`](INSTALL.md) and [`docs/InstallingWithSpack.md`](docs/InstallingWithSpack.md) contain additional information about dependencies.|
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Full| We currently have README.md, CHANGELOG.md, SUPPORT.md, and LICENSE files in root directory. |
-|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| The directory `docs/manual` contains thorough documentation in LaTeX with a prebuilt user manual PDF [linked here](docs/manual/manual.pdf). The file [`docs/DeveloperGuidelines`](./docs/DeveloperGuidelines.md) contains documentation on software development best practices that contributors are expected to follow. `docs/web` contains markdown documentation on each of the application libraries and further documentation on some dependencies and platforms. `docs/petsc-dependencies` contains further documentation on PETSc usage. |
+|**R8.** Each xSDK package should have sufficient documentation to support use and further development.  |Full| The directory `docs/manual` contains thorough documentation in LaTeX with a prebuilt user manual PDF [linked here](docs/manual/manual.pdf). The file [`docs/DeveloperGuidelines`](./docs/DeveloperGuidelines.md) contains documentation on software development best practices that contributors are expected to follow. `docs/web` contains markdown documentation on each of the application libraries and further documentation on some dependencies and platforms. `docs/petsc-dependencies` contains further documentation on PETSc usage. |

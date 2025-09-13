@@ -1,9 +1,11 @@
 # xSDK Community Policy Compatibility for PUMI, the Parallel Unstructured Mesh Infrastructure
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
+This document summarizes the efforts of current and future xSDK packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
 **Website:** https://github.com/SCOREC/core/wiki
+
+**Member:** yes
 
 ### Mandatory Policies
 
@@ -48,4 +50,4 @@ Following the numbering in [Version 0.6.0 of the xSDK Spack Variant Guidelines](
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |partial| We provide a CMake package for other users of CMake; [example](https://github.com/SCOREC/core/blob/master/doc/user_CMakeLists.cmake). |
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  | Partial | We specify the required versions of Omega_h and Simmetrix SimModSuite in our CMake files.  The required ParMETIS, Zoltan, and BZip versions are not specified.  |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  | Partial | We provide README and LICENSE but not SUPPORT and CHANGELOG files. |
-|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Partial| We provide a [developer guide](https://github.com/SCOREC/core/wiki/Developer-Guide). |
+|**R8.** Each xSDK package should have sufficient documentation to support use and further development.  |Partial| We provide a [developer guide](https://github.com/SCOREC/core/wiki/Developer-Guide). |

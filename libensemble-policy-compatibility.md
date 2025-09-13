@@ -1,14 +1,18 @@
 # xSDK Community Policy Compatibility for libEnsemble
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
+This document summarizes the efforts of current and future xSDK packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
 Please, provide information on your compatibility status for each mandatory policy, and if possible also for recommended policies.
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
 
-For current xSDK member packages: If you were not fully compatible at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
+For current xSDK packages: If you were not fully compatible at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK packages.
+
+An xSDK compatible package is considered to be a member package if it uses, or can be used by another package in the xSDK.
 
 **Website:** https://github.com/Libensemble/libensemble
+
+**Member:** yes
 
 ### Mandatory Policies
 
@@ -55,7 +59,7 @@ A special exception exists in the `node_resources.py` module; part of libEnsembl
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| The dependencies for libEnsemble are given in `setup.py` and when pip install or pip setup.py egg_info are run, a file is created `libensemble.egg-info/requires.txt` containing the list of required and optional dependencies. If installing through pip, these will automatically be installed if they do not exist (`pip install libensemble` installs req. dependencies, while `pip install libensemble[extras]` installs both required and optional dependencies.|
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Full| Dependencies are given in the documentation. In some cases, this includes a lower bound on the version number. These dependencies are also specified in the Spack package, and automatically resolved during installation.|
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Full| These files are present in the top directory.|
-|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full|libEnsemble provides documentation through a *Sphinx* framework. It is published on [readthedocs](https://libensemble.readthedocs.io), which includes a user guide covering quick-start, installation, an auto-generated API, and many usage details. There are several tutorials which contain complete examples. There is also an FAQ, known issues, release notes and contribution guide. The developer guide contains information on workflow and internal modules. A [pdf](https://libensemble.readthedocs.io/_/downloads/en/master/pdf/) version is also automatically generated.|
+|**R8.** Each xSDK package should have sufficient documentation to support use and further development.  |Full|libEnsemble provides documentation through a *Sphinx* framework. It is published on [readthedocs](https://libensemble.readthedocs.io), which includes a user guide covering quick-start, installation, an auto-generated API, and many usage details. There are several tutorials which contain complete examples. There is also an FAQ, known issues, release notes and contribution guide. The developer guide contains information on workflow and internal modules. A [pdf](https://libensemble.readthedocs.io/_/downloads/en/master/pdf/) version is also automatically generated.|
 
 R3 details <a id="r3-details"></a>: libEnsemble catches all exceptions (explicitly raised and unexpected) from the manager and worker processes, resulting in a dump of the ensemble state to files. In `mpi4py` mode, the default is to then call MPI_ABORT to prevent a hang. However, this can be turned off (via the `libE_specs` argument). In the case it is turned off, or if other communication modes are used, the exception is then raised. The user can in turn catch these exceptions from their calling script.
 

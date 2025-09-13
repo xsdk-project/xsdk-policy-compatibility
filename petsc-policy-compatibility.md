@@ -1,6 +1,6 @@
 # xSDK Community Policy Compatibility for PETSc
 
-This document summarizes the efforts of current and future xSDK member packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
+This document summarizes the efforts of current and future xSDK packages to achieve compatibility with the xSDK community policies. Below only short descriptions of each policy are provided. The full description is available [here](https://github.com/xsdk-project/xsdk-community-policies)
 and should be considered when filling out this form.
 
 *** A good example of how to complete this form can be found in the [PETSc version](https://github.com/xsdk-project/xsdk-policy-compatibility/blob/master/petsc-policy-compatibility.md).
@@ -8,9 +8,13 @@ and should be considered when filling out this form.
 Please, provide information on your compability status for each mandatory policy, and if possible also for recommended policies.
 If you are not compatible, state what is lacking and what are your plans on how to achieve compliance.
 
-For current xSDK member packages: If you were not fully compatible at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK member packages.
+For current xSDK packages: If you were not fully compatible at some point, please describe the steps you undertook to fulfill the policy. This information will be helpful for future xSDK packages.
+
+An xSDK compatible package is considered to be a member package if it uses, or can be used by another package in the xSDK.
 
 **Website:**  https://petsc.org/release
+
+**Member:** yes
 
 ### Mandatory Policies
 
@@ -48,4 +52,4 @@ M2 details <a id="m2-details"></a>: optional: provide more details about approac
 |**R5.** Provide a mechanism to export ordered list of library dependencies. |Full| The command <tt>make getlinklibs</tt> lists all dependencies for an install; PETSc also provides pkgconfig and module files.
 |**R6.** Document versions of packages that it works with or depends upon, preferably in machine-readable form.  |Partial| This is curently documented in configure - which checks for compatilbe versions of packages as needed |
 |**R7.** Have README, SUPPORT, LICENSE, and CHANGELOG files in top directory.  |Full| . Provides [README](https://gitlab.com/petsc/petsc/-/blob/main/README.md), [CONTRIBUTING](https://gitlab.com/petsc/petsc/-/blob/main/CONTRIBUTING), [LICENSE](https://gitlab.com/petsc/petsc/-/blob/main/LICENSE), [CODE_OF_CONDUCT](https://gitlab.com/petsc/petsc/-/blob/main/CODE_OF_CONDUCT.md) in repo and [CHANGES](https://petsc.org/release/docs/changes) |
-|**R8.** Each xSDK member package should have sufficient documentation to support use and further development.  |Full| [Developer document](https://petsc.org/release/developers/) |
+|**R8.** Each xSDK package should have sufficient documentation to support use and further development.  |Full| [Developer document](https://petsc.org/release/developers/) |
