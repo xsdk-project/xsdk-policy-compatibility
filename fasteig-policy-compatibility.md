@@ -12,7 +12,7 @@ An xSDK compatible package is considered to be a member package if it uses, or c
 
 **Website:** https://github.com/BerkeleyLab/fasteig
 
-**Member:** \<yes/no\>
+**Member:** no
 
 ### Mandatory Policies
 
