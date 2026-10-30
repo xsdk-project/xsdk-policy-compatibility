@@ -34,7 +34,7 @@ An xSDK compatible package is considered to be a member package if it uses, or c
 |**M14.** Be buildable using 64 bit pointers. 32 bit is optional. |Full| fastEig support 64 bit pointers.. |
 |**M15.** All xSDK compatibility changes should be sustainable. |Full| We have incorporated the xSDK compatibility changes fully into the basic fastEig infrastructure, so that xSDK options get the same maintenance and support as any other feature of fastEig. |
 |**M16.** Have a debug build option. |Full| fastEig provides such an option with -DCMAKE_BUILD_TYPE=Debug. |
-|**M17.** Each xSDK package should have sufficient documentation to support use and further development.  |Partial| fastEig provides documentation for the installation and use. We are also documenting the classes and installation mechanisms. |
+|**M17.** Each xSDK package should have sufficient documentation to support use and further development.  |Full| fastEig provides documentation for the installation and use. We are also documenting the classes and installation mechanisms. |
 
 ### Recommended Policies
 
