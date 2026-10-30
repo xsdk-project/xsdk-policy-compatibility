@@ -20,7 +20,7 @@ An xSDK compatible package is considered to be a member package if it uses, or c
 |------------------------|-------|-------------------------|
 |**M1.** Support portable installation through Spack. |Full| fastEig supports and provides a Spack package installer.|
 |**M2.** Provide a comprehensive test suite for correctness of installation verification. |Full| "make test install" tests the functionality of the various eigensolvers provided by fastEig.|
-|**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |None| The current implementation support single CPU and GPU. |
+|**M3.** Employ user-provided MPI communicator (no MPI_COMM_WORLD). Don't assume a full MPI 3 implementation without checking. Provide an option to prevent any changes to MPI error-handling if it is changed by default. |NA| The current implementation support single CPU and GPU. |
 |**M4.** Give best effort at portability to key architectures (standard Linux distributions, GNU, Clang, vendor compilers, and target machines at ALCF, NERSC, OLCF). |Full| fastEig has been tested with the common production compilers (GNU, clang, icc for CPU platforms, and NVCC for NVIDIA platforms). |
 |**M5.** Provide a documented, reliable way to contact the development team. |Full| fastEig developers can be contacted from the github page. |
 |**M6.** Respect system resources and settings made by other previously called packages (e.g. signal handling). |Full| fastEig handles the most exceptions and if enabled the information is exposed to the users. |
